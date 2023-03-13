@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+
+  <style>
+nav {
+  background-color: #0066ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.logo img {
+  height: 50px;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .menu li a {
+    padding: 10px 0;
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .social-icons {
+    margin: 10px 0;
+  }
+  
+  .contact {
+    margin: 10px 0;
+  }
+}
+
+
+
+  </style>
+
+<nav>
+  <div class="logo">
+    <a href="#"><img src="your-logo.png" alt="Logo"></a>
+  </div>
+  <div class="menu-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+  <div class="social-icons">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+  </div>
+  <div class="contact">
+    <a href="#">+256708 003 003</a>
+  </div>
+</nav>
+
+
+
+
+
+
+
+</body>
+</html>
