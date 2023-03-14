@@ -216,7 +216,7 @@ Navbar
   display: none;
 }
 .nav {
-  height: 9rem;
+  height: 6rem;
   padding: 1rem;
   display: grid;
   -webkit-box-align: center;
