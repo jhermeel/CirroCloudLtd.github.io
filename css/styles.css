@@ -305,6 +305,10 @@ Navbar
     font-weight: bold;
     letter-spacing: var(--spacing);
   }
+  .nav-links a.active {
+    color: var(--primary-500);
+  }
+
   .nav-links a:hover {
     color: var(--primary-500);
   }
@@ -894,7 +898,7 @@ Blog
   height: 100%;
   border-radius: var(--radius);
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate(0,0,0);
+  transform: translate(0, 0, 0);
   visibility: visible;
 }
 .card-front {
@@ -1237,12 +1241,18 @@ Products Page
 }
 
 .team-item span {
+<<<<<<< Updated upstream
   margin-top: .2rem;
   color: rgb(17, 173, 139);
   font-size: .8rem;
+=======
+  margin-top: 0.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(7, 176, 176);
+>>>>>>> Stashed changes
 }
 
 .team-item img {
   width: 80px;
 }
-
