@@ -1241,16 +1241,9 @@ Products Page
 }
 
 .team-item span {
-<<<<<<< Updated upstream
   margin-top: .2rem;
   color: rgb(17, 173, 139);
   font-size: .8rem;
-=======
-  margin-top: 0.4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(7, 176, 176);
->>>>>>> Stashed changes
 }
 
 .team-item img {
