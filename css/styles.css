@@ -278,7 +278,7 @@ Navbar
 .nav-btn {
   background: transparent;
   border-color: transparent;
-  color: var(--primary-500);
+  color: var(-clr-grey-1);
   font-size: 2rem;
   cursor: pointer;
   justify-self: end;
@@ -301,12 +301,12 @@ Navbar
   }
   .nav-links a {
     text-transform: capitalize;
-    color: var(--primary-500);
+    color: var(--clr-grey-1);
     font-weight: bold;
     letter-spacing: var(--spacing);
   }
   .nav-links a:hover {
-    color: var(--primary-900);
+    color: var(--primary-500);
   }
   .nav-center {
     display: grid;
