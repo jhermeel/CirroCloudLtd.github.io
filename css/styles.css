@@ -946,29 +946,133 @@ Blog
   gap: 3rem 1rem;
 }
 /*
+/*
+===============   ===============
+Top Nav added code ends , jamal
+===============  ===============
+*/  
+
+
+/* set the font size and icon size to 10px */
+.banner-social-icon i {
+  font-size: 12px;
+
+
+}
+
+.caption-text {
+  font-size: 12px;
+}
+
+/* make the top nav small */
+.nav-banner {
+  height: 20px;
+  padding-top:5px;
+  padding-bottom:8px;
+
+}
+
+@media only screen and (max-width: 767px) {
+  /* hide the icons and text in small screens */
+  .banner-item {
+    display: none;
+  }
+  
+  /* make the top nav small */
+  .nav-banner {
+    height: 50px;
+  }
+  
+  /* set the font size and icon size to 6px */
+  .banner-social-icon i {
+    font-size: 6px;
+  }
+  
+  .caption-text {
+    font-size: 6px;
+  }
+}
+
+
+/*
+===============   ===============
+To nav added code ends  , jamal
+===============   ===============
+*/ 
+
+
+
+/*
 =============== 
-Footer
+Footer added code, jamal
 ===============
 */
+/* Footer Styles */
 .footer {
-  padding-bottom: 2rem;
-  background: #222;
-  display: grid;
-  place-items: center;
+  background-color: #ddd;
+  padding-left: 40px;
+  padding-top: 40px;
+  margin-top: 40px;
+/*  padding: 50px 0;*/
 }
-.footer .social-icons {
-  margin-bottom: 2rem;
+
+.footer-col {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
 }
-.footer .social-icon {
-  color: var(--primary-500);
+
+.footer h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
 }
-.footer .social-icon:hover {
-  color: var(--primary-100);
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.footer p {
-  font-size: 1.25rem;
-  text-transform: capitalize;
+
+.footer ul li {
+  margin-bottom: 10px;
 }
+
+.footer ul li a {
+  font-size:0.8rem;
+  color: #444;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-col {
+    flex: 1;
+    margin: 0 15px;
+    text-align: left;
+  }
+  
+  .footer-col:first-child {
+    text-align: left;
+  }
+  
+  .footer h3 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+/*
+===============  ===============
+Footer added code ends, Jmala
+===============  ===============
+*/
 /*
 =============== 
 Single Page
