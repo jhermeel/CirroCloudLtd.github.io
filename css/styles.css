@@ -888,6 +888,7 @@ Blog
   height: 100%;
   border-radius: var(--radius);
   -webkit-transform: translate3d(0, 0, 0);
+  transform: translate(0,0,0);
   visibility: visible;
 }
 .card-front {
@@ -1077,4 +1078,116 @@ Products Page
 }
 .footer-item li {
   font-family: Arial, Helvetica, sans-serif;
+}
+/* Our Team */
+#our-Team {
+  width: 80%;
+  margin: 4rem auto 1rem;
+}
+
+#our-Team h2 {
+  text-align: center;
+  margin: 1rem auto 4rem;
+  position: relative;
+}
+
+#our-Team h2::after {
+  content: '';
+  height: 4px;
+  margin: 0 auto;
+  text-align: center;
+  width: 15%;
+  background-color: aqua;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  border-radius: 5px;
+  transform: translate(-50%);
+}
+
+.teamContainer {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.team-item h5 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.team-item span {
+  margin-top: .4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(7, 176, 176);
+}
+
+.team-item img {
+  width: 80px;
+}
+
+footer {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 784px) {
+  #list {
+      display: none;
+  }
+
+  #hamBurger {
+      cursor: pointer;
+      display: block;
+      z-index: 20;
+      font-size: 2rem;
+  }
+
+  .navbar .responsive {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0%;
+      left: 100%;
+      padding: 2rem 0;
+      z-index: 2;
+      height: 100vh;
+      background-color: rgb(24, 23, 24);
+      width: 100%;
+      transition: all 0.5s linear;
+      opacity: 0.9;
+  }
+
+  .navbar ul li {
+      margin: 0.4rem 0;
+  }
+
+  .responsive.active {
+      left: 0%;
+  }
+
+  .goal-right {
+      width: 100%;
+      margin: 0 auto 2rem;
+  }
+
+  .goal-left {
+      width: 100%;
+      text-align: center;
+  }
+
+  #goal {
+      flex-direction: column-reverse;
+  }
 }
