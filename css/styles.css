@@ -203,10 +203,16 @@ p {
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
+  padding-top: 10;
 }
 .bg-grey {
   background: var(--clr-grey-10);
 }
+.bg-darkgrey {
+  background: var(--clr-primary-10);
+}
+
+/*
 /*
 =============== 
 NavBanner
@@ -1227,14 +1233,13 @@ Products Page
 
 .team-item h5 {
   margin-top: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .team-item span {
-  margin-top: .4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(7, 176, 176);
+  margin-top: .2rem;
+  color: rgb(17, 173, 139);
+  font-size: .8rem;
 }
 
 .team-item img {
