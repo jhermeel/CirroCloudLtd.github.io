@@ -145,12 +145,19 @@
     <!-- end of services -->
 
     <!-- blog -->
-    <section class="section blog">
-      <ul class="blog-list"></ul>
-      <div class="pagination">
-        <button class="prev-btn .blog-button">Previous</button>
-        <button class="next-btn .blog-button">Next</button>
+    <section class="section">
+      <div class="blog-detail">
+        <img class="blog-detail-image" src="" alt="" />
+        <h1 class="blog-detail-title"></h1>
+        <small class="blog-detail-date"></small>
+        <p class="blog-detail-readTime"></p>
       </div>
+      <div
+        class="fb-comments"
+        data-href=""
+        data-width="100%"
+        data-numposts="5"
+      ></div>
     </section>
     <!--end of  blog -->
 
@@ -271,6 +278,15 @@
       gtag('js', new Date());
       gtag('config', 'G-GNHVFN0CGQ');
     </script>
+    <script
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
+      async
+      defer
+      crossorigin="anonymous"
+    ></script>
     <script src="js/blog.js"></script>
+    <script>
+      displayBlogDetail();
+    </script>
   </body>
 </html>

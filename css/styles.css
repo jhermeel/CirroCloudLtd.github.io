@@ -51,6 +51,7 @@ Variables
   --clr-white: #fff;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
+  --ff-tertiary: 'Jost', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -960,14 +961,11 @@ Blog
 ===============   ===============
 Top Nav added code starts , jamal
 ===============  ===============
-*/  
-
+*/
 
 /* set the font size and icon size to 10px */
 .banner-social-icon i {
   font-size: 12px;
-
-
 }
 
 .caption-text {
@@ -977,9 +975,8 @@ Top Nav added code starts , jamal
 /* make the top nav small */
 .nav-banner {
   height: 20px;
-  padding-top:5px;
-  padding-bottom:8px;
-
+  padding-top: 5px;
+  padding-bottom: 8px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -987,28 +984,27 @@ Top Nav added code starts , jamal
   .banner-item {
     display: none;
   }
-  
+
   /* make the top nav small */
   .nav-banner {
     height: 50px;
   }
-  
+
   /* set the font size and icon size to 6px */
   .banner-social-icon i {
     font-size: 6px;
   }
-  
+
   .caption-text {
     font-size: 6px;
   }
 }
 
-
 /*
 ===============   ===============
 To nav added code ends  , jamal
 ===============   ===============
-*/ 
+*/
 
 /*===============     ===============.
 Products added  code  starts  Jamal
@@ -1016,7 +1012,6 @@ Products added  code  starts  Jamal
 * {
   box-sizing: border-box;
 }
-
 
 /* Float four columns side by side */
 .col {
@@ -1027,11 +1022,13 @@ Products added  code  starts  Jamal
 }
 
 /* Remove extra left and right margins, due to padding */
-.rw {margin: 0 15px;}
+.rw {
+  margin: 0 15px;
+}
 
 /* Clear floats after the columns */
 .rw:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -1056,8 +1053,6 @@ Products added  code  starts  Jamal
 Products added   code ends  Jamal
 ===============     =============== */
 
-
-
 /*
 =============== 
 Footer added code, jamal
@@ -1068,7 +1063,7 @@ Footer added code, jamal
   padding-left: 40px;
   padding-top: 40px;
   margin-top: 40px;
-/*  padding: 50px 0;*/
+  /*  padding: 50px 0;*/
 }
 
 .footer-col {
@@ -1095,7 +1090,7 @@ Footer added code, jamal
 }
 
 .footer ul li a {
-  font-size:0.8rem;
+  font-size: 0.8rem;
   color: #ccc;
   text-decoration: none;
 }
@@ -1106,17 +1101,17 @@ Footer added code, jamal
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .footer-col {
     flex: 1;
     margin: 0 15px;
     text-align: left;
   }
-  
+
   .footer-col:first-child {
     text-align: left;
   }
-  
+
   .footer h3 {
     text-align: left;
     margin-bottom: 20px;
@@ -1286,11 +1281,81 @@ Products Page
 }
 
 .team-item span {
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   color: rgb(17, 173, 139);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .team-item img {
   width: 80px;
+}
+
+.blog-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.blog-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-details h2 {
+  margin: 0;
+}
+
+.blog-details small {
+  margin-top: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.blog-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Add the following styles to your styles.css file */
+
+.blog-detail {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.blog-detail-image {
+  width: 100%;
+  height: auto;
+}
+
+.blog-detail-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
 }
