@@ -86,10 +86,9 @@ function createBlogListItem(blog) {
 
   const title = document.createElement('h2');
   const titleLink = document.createElement('a');
-  titleLink.href = `blog-detail.html?id=${blog.id}`;
+  titleLink.href = `blog-details.html?id=${blog.id}`;
   titleLink.textContent = blog.title;
   title.appendChild(titleLink);
-  title.textContent = blog.title;
 
   const dateAndReadTime = document.createElement('small');
   dateAndReadTime.textContent = `${blog.date} - ${blog.readTime} min read`;
@@ -146,3 +145,21 @@ document.querySelector('.next-btn').addEventListener('click', () => {
 });
 
 renderBlogList();
+
+function displayBlogDetail() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = parseInt(urlParams.get('id'), 10);
+  const blog = blogList.find((blog) => blog.id === blogId);
+
+  if (blog) {
+    document.querySelector('.blog-detail-image').src = blog.imageUrl;
+    document.querySelector('.blog-detail-title').textContent = blog.title;
+    document.querySelector('.blog-detail-date').textContent = blog.date;
+    document.querySelector(
+      '.blog-detail-readTime'
+    ).textContent = `${blog.readTime} min read`;
+    document
+      .querySelector('.fb-comments')
+      .setAttribute('data-href', window.location.href);
+  }
+}
