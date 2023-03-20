@@ -5,221 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CirroCloud</title>
 
-
-
-    <style >
-      * {
-  box-sizing: border-box;
-}
-
-
-/* Float four columns side by side */
-.col {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-  margin-top: 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.rw {margin: 0 15px;}
-
-/* Clear floats after the columns */
-.rw:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .col {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.cd {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-
-
-/*
-=============== 
-Footer added code, jamal
-===============
-*/
-/* Footer Styles */
-.footer {
-  padding-left: 40px;
-  padding-top: 40px;
-  margin-top: 40px;
-/*  padding: 50px 0;*/
-}
-
-.footer-col {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.footer h3 {
-  font-size: 1.2rem;
-  color: #bbb;
-  margin-bottom: 20px;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer ul li {
-  margin-bottom: 10px;
-}
-
-.footer ul li a {
-  font-size:0.8rem;
-  color: #ccc;
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .footer-col {
-    flex: 1;
-    margin: 0 15px;
-    text-align: left;
-  }
-  
-  .footer-col:first-child {
-    text-align: left;
-  }
-  
-  .footer h3 {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-}
-
-/*
-===============  ===============
-Footer added code ends, Jmala
-===============  ===============
-*/
-
-    /*
-===============   ===============
-Top Nav added code starts , jamal
-===============  ===============
-*/  
-
-
-/* set the font size and icon size to 10px */
-.banner-social-icon i {
-  font-size: 12px;
-
-
-}
-
-.caption-text {
-  font-size: 12px;
-}
-
-/* make the top nav small */
-.nav-banner {
-  height: 20px;
-  padding-top:5px;
-  padding-bottom:8px;
-
-}
-
-@media only screen and (max-width: 767px) {
-  /* hide the icons and text in small screens */
-  .banner-item {
-    display: none;
-  }
-  
-  /* make the top nav small */
-  .nav-banner {
-    height: 50px;
-  }
-  
-  /* set the font size and icon size to 6px */
-  .banner-social-icon i {
-    font-size: 6px;
-  }
-  
-  .caption-text {
-    font-size: 6px;
-  }
-}
-
-/*
-===============   ===============
-To nav added code ends  , jamal
-===============   ===============*/
-
-
-/*===============     ===============.
-Products added  code  starts  Jamal
-===============     =============== */
-* {
-  box-sizing: border-box;
-}
-
-
-/* Float four columns side by side */
-.col {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-  margin-top: 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.rw {margin: 0 15px;}
-
-/* Clear floats after the columns */
-.rw:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .col {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.cd {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-/*===============     ===============
-Products added   code ends  Jamal
-===============     =============== */
-</style>
-
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -227,7 +12,8 @@ Products added   code ends  Jamal
     />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
   </head>
   <body>
     <!-- container -->
@@ -299,83 +85,62 @@ Products added   code ends  Jamal
       </div>
     </nav>
     <!-- end of navbar -->
-    <!-- sidebar -->
-    <aside class="sidebar" id="sidebar">
-      <div>
-        <button class="close-btn" id="close-btn">
-          <i class="fas fa-times"></i>
-        </button>
-        <!-- nav-links -->
-        <ul class="sidebar-links">
-          <li>
-            <a href="index">home</a>
-          </li>
-          <li>
-            <a href="about">about us</a>
-          </li>
-          <li>
-            <a href="services">services</a>
-          </li>
-          <li>
-            <a href="Projects">projects</a>
-          </li>
-          <li>
-            <a href="blog">blog</a>
-          </li>
-          <li>
-            <a href="contact">contact</a>
-          </li>
-        </ul>
-        <!-- social icons -->
-        <ul class="social-icons">
-          <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-squarespace"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-behance"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
+
+
+    <!-- ..................................Slider starts  ............................-->
+    
+    <div class="sli">
+    <!-- fade css -->
+    <div class="myslide fade">
+      <div class="txt">
+        <h1>Office 365 </h1>
+        <p>We provide Office 365 Services <br> to our customers to enable them improve their usage</p>
       </div>
-    </aside>
-    <!-- end of sidebar -->
-  
-    <!-- header -->
-    <header class="hero">
-      <div class="hero-banner">
-        <h1 class="hero-title">Business automation</h1>
-        <p class="hero-text">
-          Modernize your work space with powerful microsoft on-premise and cloud
-          tools tailored for your business
-        </p>
-        <a href="#featured" class="btn btn-white scroll-link">explore Tools</a>
+      <span class="im"><img src="images/slider2/img3.jpg" style="width: 100%; height: 100%;"></span>
+    </div>
+    
+    <div class="myslide fade">
+      <div class="txt">
+        <h1>Microsoft Dynamic Nav</h1>
+        <p>We actively<br>support business in digital transformation</p>
       </div>
-    </header>
-    <!-- end of header -->
-     <!-- about -->
-     <section class="section about">
+      <span class="im"><img src="images/iner/iner4.jpg" style="width: 100%; height: 100%;"></span>
+    </div>
+    
+    <div class="myslide fade">
+      <div class="txt">
+        <h1>Microsoft Azure </h1>
+        <p>We support businesses  <br> in migrating to cloud services</p>
+      </div>
+      <span class="im"><img src="images/iner/iner9.jpg" style="width: 100%; height: 100%;"></span>
+    </div>
+    
+    <!-- /fade css -->
+    
+    <!-- onclick js -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <div class="dotsbox" style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    </div>
+
+ <!-- .....................Slider ends   ............................-->
+
+
+
+<!-- ..................... welcome  section   starts............................-->
+    
+         <section class="section about">
       <div class="section-center about-center">
         <!-- about img -->
         <article >
-           <img src="images/gifs/product.gif" alt="gif animated" style="width:508px;height:408px; ">
+           <img src="images/gifs/product.gif" alt="gif animated" style="width:378px; height:308px; ">
         </article>
         <!-- about info -->
         <article class="about-info">
@@ -400,8 +165,23 @@ Products added   code ends  Jamal
         </article>
       </div>
     </section>
-    <!-- end of about -->
-     <!-- ..................Products section starts -->
+ <!-- ..................welcomw section   ends .......................--> 
+
+  <!-- ..................parallax starts ......................  ......--> 
+
+    <header class="hero">
+      <div class="hero-banner">
+        <h1 class="hero-title">Business automation</h1>
+        <p class="hero-text">
+          Modernize your work space with powerful microsoft on-premise and cloud
+          tools tailored for your business
+        </p>
+        <a href="#featured" class="btn btn-white scroll-link">explore Tools</a>
+      </div>
+    </header>
+  <!-- ..................... parallax section  ends  ............................-->
+
+  <!-- ..................Products section starts................................. -->
 
  <div class="section-title">
         <h2>Products</h2>
@@ -411,7 +191,7 @@ Products added   code ends  Jamal
   <div class="col">
     <div class="cd">
       <h3>Office 365</h3>
-      <img src="./images/iner/iner2.JPG" alt="office image" style="height: 160px"  /> 
+      <img src="./images/iner/iner2.jpg" alt=0 style="height: 160px"  /> 
       <p>See More</p>
     </div>
   </div>
@@ -441,11 +221,10 @@ Products added   code ends  Jamal
   </div>
 </div><br><br><br><br><br><br>
 
-<!-- ....................Products ..............................-->
+<!-- ......................  Products ends ..............................-->
 
-    
-    <!-- ,,.................services starts...............-->
-        <!-- connect -->
+ <!-- ......................  services starts...............................-->
+        
     <section class="connect">
       <video  controls autoplay muted loop class="video-container" poster="./images/project-1.jpeg">
         <source src="./videos/connect.mp4" type="video/mp4" />
@@ -468,9 +247,9 @@ Products added   code ends  Jamal
         <a href="contact.html" class="btn">contact us</a>
       </div>
     </section>
-    <!-- end of connect -->
+ <!-- ..................................services ends   ............................-->
    
-       <!-- footer  starts-->
+  <!-- ..................................footer starts   ............................-->
 
 <footer class="footer" style="background-image: url(images/fbg.png)">
   <div class="footer-col">  
@@ -545,7 +324,10 @@ Products added   code ends  Jamal
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());  gtag('config', 'G-5K9EZMW5T3');
+  gtag('js', new Date());
+
+  gtag('config', 'G-5K9EZMW5T3');
 </script>
+<script src="jamie/jamieslider.js"></script>   <!-- .............slider js code  ............................-->
   </body>
 </html>
