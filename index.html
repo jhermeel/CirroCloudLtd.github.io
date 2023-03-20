@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -142,6 +142,47 @@
       </div>
     </aside>
     <!-- end of sidebar -->
+    <style >
+      * {
+  box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.col {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.rw {margin: 0 15px;}
+
+/* Clear floats after the columns */
+.rw:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.cd {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+    </style>
     <!-- header -->
     <header class="hero">
       <div class="hero-banner">
