@@ -142,14 +142,23 @@
     </aside>
     <!-- end of sidebar -->
 
+    <!-- end of services -->
+
     <!-- blog -->
-    <section class="section blog">
-      <button class="create-blog-btn">Create Blog</button>
-      <ul class="blog-list"></ul>
-      <div class="pagination">
-        <button class="prev-btn .blog-button">Previous</button>
-        <button class="next-btn .blog-button">Next</button>
-      </div>
+    <section class="section">
+      <h1 id="form-title">Create Blog</h1>
+      <form class="blog-form" onsubmit="event.preventDefault(); saveBlog();">
+        <input type="hidden" id="blog-id" />
+        <label for="blog-title">Title</label>
+        <input type="text" id="blog-title" required />
+        <label for="blog-date">Date</label>
+        <input type="date" id="blog-date" required />
+        <label for="blog-readTime">Read Time</label>
+        <input type="number" id="blog-readTime" required />
+        <label for="blog-imageUrl">Image URL</label>
+        <input type="url" id="blog-imageUrl" required />
+        <button type="submit">Save Blog</button>
+      </form>
     </section>
     <!--end of  blog -->
 
@@ -270,6 +279,15 @@
       gtag('js', new Date());
       gtag('config', 'G-GNHVFN0CGQ');
     </script>
+    <script
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
+      async
+      defer
+      crossorigin="anonymous"
+    ></script>
     <script src="js/blog.js"></script>
+    <script>
+      loadBlogForm();
+    </script>
   </body>
 </html>

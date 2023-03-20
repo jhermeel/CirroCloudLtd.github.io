@@ -163,3 +163,61 @@ function displayBlogDetail() {
       .setAttribute('data-href', window.location.href);
   }
 }
+
+function loadBlogForm() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = parseInt(urlParams.get('id'), 10);
+
+  if (blogId) {
+    const blog = blogList.find((blog) => blog.id === blogId);
+    if (blog) {
+      document.getElementById('form-title').textContent = 'Edit Blog';
+      document.getElementById('blog-id').value = blog.id;
+      document.getElementById('blog-title').value = blog.title;
+      document.getElementById('blog-date').value = blog.date;
+      document.getElementById('blog-readTime').value = blog.readTime;
+      document.getElementById('blog-imageUrl').value = blog.imageUrl;
+    }
+  }
+}
+
+function saveBlog() {
+  const idInput = document.getElementById('blog-id');
+  const titleInput = document.getElementById('blog-title');
+  const dateInput = document.getElementById('blog-date');
+  const readTimeInput = document.getElementById('blog-readTime');
+  const imageUrlInput = document.getElementById('blog-imageUrl');
+
+  const blog = {
+    id: parseInt(idInput.value, 10) || blogList.length + 1,
+    title: titleInput.value,
+    date: dateInput.value,
+    readTime: parseInt(readTimeInput.value, 10),
+    imageUrl: imageUrlInput.value,
+  };
+
+  const existingBlogIndex = blogList.findIndex((item) => item.id === blog.id);
+  if (existingBlogIndex !== -1) {
+    blogList[existingBlogIndex] = blog;
+  } else {
+    blogList.push(blog);
+  }
+
+  alert('Blog saved successfully');
+  window.location.href = 'blog.html';
+}
+
+// Event listeners for Edit and Create Blog buttons
+if (document.querySelector('.edit-btn')) {
+  document.querySelector('.edit-btn').addEventListener('click', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogId = urlParams.get('id');
+    window.location.href = `blog-form.html?id=${blogId}`;
+  });
+}
+
+if (document.querySelector('.create-blog-btn')) {
+  document.querySelector('.create-blog-btn').addEventListener('click', () => {
+    window.location.href = 'blog-form.html';
+  });
+}

@@ -1359,3 +1359,23 @@ Products Page
   font-weight: bold;
   margin: 20px 0;
 }
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.blog-form label {
+  margin: 10px 0;
+}
+
+.blog-form input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.blog-form button {
+  margin-top: 20px;
+}
