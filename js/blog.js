@@ -15,6 +15,28 @@ async function fetchBlogList() {
   }
 }
 
+async function createBlogOnAPI(blog) {
+  try {
+    const response = await fetch('http://localhost:5000/api/v1/blogs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(blog),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const createdBlog = await response.json();
+    return createdBlog;
+  } catch (error) {
+    console.error('Error creating blog:', error);
+    throw error;
+  }
+}
+
 let currentPage = 0;
 const itemsPerPage = 4;
 
@@ -125,7 +147,7 @@ function loadBlogForm() {
   }
 }
 
-function saveBlog() {
+async function saveBlog() {
   const idInput = document.getElementById('blog-id');
   const titleInput = document.getElementById('blog-title');
   const dateInput = document.getElementById('blog-date');
@@ -144,7 +166,13 @@ function saveBlog() {
   if (existingBlogIndex !== -1) {
     blogList[existingBlogIndex] = blog;
   } else {
-    blogList.push(blog);
+    try {
+      const createdBlog = await createBlogOnAPI(blog);
+      blogList.push(createdBlog);
+    } catch (error) {
+      alert('Error creating blog');
+      return;
+    }
   }
 
   alert('Blog saved successfully');
