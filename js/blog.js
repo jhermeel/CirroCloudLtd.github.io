@@ -52,7 +52,7 @@ function createBlogListItem(blog) {
 
   const title = document.createElement('h2');
   const titleLink = document.createElement('a');
-  titleLink.href = `blog-details.html?id=${blog.id}`;
+  // titleLink.href = `blog-details.html?id=${blog._id}`;
   titleLink.textContent = blog.title;
   title.appendChild(titleLink);
 
@@ -79,6 +79,22 @@ function renderBlogList() {
     const blogItem = createBlogListItem(blogList[i]);
     blogListElement.appendChild(blogItem);
   }
+
+  const blogItems = document.querySelectorAll('.blog-item');
+
+  blogItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const blogData = {
+        title: item.querySelector('h2 a').innerText,
+        date: item.querySelector('small').innerText,
+        readTime: item.querySelector('small').innerText,
+        // content: item.querySelector('.blog-content').innerText,
+        image: item.querySelector('img').getAttribute('src'),
+      };
+      localStorage.setItem('selectedBlog', JSON.stringify(blogData));
+      window.location.href = 'blog-details.html';
+    });
+  });
 
   updatePaginationButtons();
 }
@@ -113,21 +129,22 @@ document.querySelector('.next-btn').addEventListener('click', () => {
 renderBlogList();
 
 function displayBlogDetail() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const blogId = parseInt(urlParams.get('id'), 10);
-  const blog = blogList.find((blog) => blog.id === blogId);
+  const selectedBlog = JSON.parse(localStorage.getItem('selectedBlog'));
 
-  if (blog) {
-    document.querySelector('.blog-detail-image').src = blog.imageUrl;
-    document.querySelector('.blog-detail-title').textContent = blog.title;
-    document.querySelector('.blog-detail-date').textContent = blog.date;
-    document.querySelector(
-      '.blog-detail-readTime'
-    ).textContent = `${blog.readTime} min read`;
-    document
-      .querySelector('.fb-comments')
-      .setAttribute('data-href', window.location.href);
+  if (selectedBlog) {
+    const blogDetailTitle = document.querySelector('.blog-detail-title');
+    const blogDetailDate = document.querySelector('.blog-detail-date');
+    const blogDetailReadTime = document.querySelector('.blog-detail-readTime');
+    const blogDetailContent = document.querySelector('.blog-detail-content');
+    const blogDetailImage = document.querySelector('.blog-detail-image');
+
+    blogDetailTitle.innerText = selectedBlog.title;
+    blogDetailDate.innerText = selectedBlog.date;
+    blogDetailReadTime.innerText = selectedBlog.readTime;
+    // blogDetailContent.innerHTML = selectedBlog.content;
+    blogDetailImage.setAttribute('src', selectedBlog.image);
   }
+  localStorage.removeItem('selectedBlog');
 }
 
 function loadBlogForm() {
@@ -187,6 +204,22 @@ if (document.querySelector('.edit-btn')) {
     window.location.href = `blog-form.html?id=${blogId}`;
   });
 }
+
+const blogItems = document.querySelectorAll('.blog-item');
+
+blogItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const blogData = {
+      title: item.querySelector('.blog-title').innerText,
+      date: item.querySelector('.blog-date').innerText,
+      readTime: item.querySelector('.blog-readTime').innerText,
+      content: item.querySelector('.blog-content').innerText,
+      image: item.querySelector('.blog-image').getAttribute('src'),
+    };
+    localStorage.setItem('selectedBlog', JSON.stringify(blogData));
+    window.location.href = 'blog-details.html';
+  });
+});
 
 if (document.querySelector('.create-blog-btn')) {
   document.querySelector('.create-blog-btn').addEventListener('click', () => {
