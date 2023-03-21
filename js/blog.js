@@ -1,75 +1,19 @@
-const blogList = [
-  {
-    id: 1,
-    title: 'First Blog Post',
-    date: '2023-03-19',
-    readTime: 5,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 2,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 3,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 4,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 5,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 6,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 7,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 8,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 9,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-  {
-    id: 10,
-    title: 'Second Blog Post',
-    date: '2023-03-18',
-    readTime: 3,
-    imageUrl: 'https://via.placeholder.com/100',
-  },
-];
+const blogList = [];
+
+async function fetchBlogList() {
+  try {
+    const response = await fetch('http://localhost:5000/api/v1/blogs');
+    if (response.ok) {
+      const data = await response.json();
+      blogList.push(...data.blogs);
+      renderBlogList();
+    } else {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  } catch (error) {
+    console.error('Error fetching blog list:', error);
+  }
+}
 
 let currentPage = 0;
 const itemsPerPage = 4;
