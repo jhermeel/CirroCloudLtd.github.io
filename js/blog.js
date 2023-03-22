@@ -84,10 +84,19 @@ function renderBlogList() {
 
   blogItems.forEach((item) => {
     item.addEventListener('click', () => {
+      const inputString = item.querySelector('small').innerText;
+
+      const datePattern = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/;
+      const dateMatch = inputString.match(datePattern);
+      const date = dateMatch ? dateMatch[0] : null;
+
+      const readTimePattern = /\d+(?=\s*min)/;
+      const readTimeMatch = inputString.match(readTimePattern);
+      const readTime = readTimeMatch ? parseInt(readTimeMatch[0], 10) : null;
       const blogData = {
         title: item.querySelector('h2 a').innerText,
-        date: item.querySelector('small').innerText,
-        readTime: item.querySelector('small').innerText,
+        date: date,
+        readTime: readTime,
         // content: item.querySelector('.blog-content').innerText,
         image: item.querySelector('img').getAttribute('src'),
       };
@@ -144,23 +153,21 @@ function displayBlogDetail() {
     // blogDetailContent.innerHTML = selectedBlog.content;
     blogDetailImage.setAttribute('src', selectedBlog.image);
   }
-  localStorage.removeItem('selectedBlog');
+
+  const editButton = document.querySelector('.edit-btn');
+  if (editButton) {
+    editButton.addEventListener('click', () => {
+      const blogData = JSON.parse(localStorage.getItem('selectedBlog'));
+      localStorage.setItem('selectedBlog', JSON.stringify(blogData));
+      window.location.href = 'blog-form.html';
+    });
+  }
 }
 
 function loadBlogForm() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const blogId = parseInt(urlParams.get('id'), 10);
-
-  if (blogId) {
-    const blog = blogList.find((blog) => blog.id === blogId);
-    if (blog) {
-      document.getElementById('form-title').textContent = 'Edit Blog';
-      document.getElementById('blog-id').value = blog.id;
-      document.getElementById('blog-title').value = blog.title;
-      document.getElementById('blog-date').value = blog.date;
-      document.getElementById('blog-readTime').value = blog.readTime;
-      document.getElementById('blog-imageUrl').value = blog.imageUrl;
-    }
+  const existingBlogData = JSON.parse(localStorage.getItem('selectedBlog'));
+  if (existingBlogData) {
+    populateForm(existingBlogData);
   }
 }
 
@@ -196,33 +203,47 @@ async function saveBlog() {
   window.location.href = 'blog.html';
 }
 
-// Event listeners for Edit and Create Blog buttons
-if (document.querySelector('.edit-btn')) {
-  document.querySelector('.edit-btn').addEventListener('click', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const blogId = urlParams.get('id');
-    window.location.href = `blog-form.html?id=${blogId}`;
-  });
-}
-
-const blogItems = document.querySelectorAll('.blog-item');
-
-blogItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    const blogData = {
-      title: item.querySelector('.blog-title').innerText,
-      date: item.querySelector('.blog-date').innerText,
-      readTime: item.querySelector('.blog-readTime').innerText,
-      content: item.querySelector('.blog-content').innerText,
-      image: item.querySelector('.blog-image').getAttribute('src'),
-    };
-    localStorage.setItem('selectedBlog', JSON.stringify(blogData));
-    window.location.href = 'blog-details.html';
-  });
-});
-
 if (document.querySelector('.create-blog-btn')) {
   document.querySelector('.create-blog-btn').addEventListener('click', () => {
     window.location.href = 'blog-form.html';
   });
+}
+
+function setupEditButton() {
+  const editButton = document.querySelector('.edit-btn');
+  if (editButton) {
+    editButton.addEventListener('click', () => {
+      const blogData = JSON.parse(localStorage.getItem('selectedBlog'));
+      localStorage.setItem('selectedBlog', JSON.stringify(blogData));
+      window.location.href = 'blog-form.html';
+    });
+  }
+}
+
+function populateForm(blogData) {
+  const titleInput = document.querySelector('#blog-title');
+  const dateInput = document.querySelector('#blog-date');
+  const readTimeInput = document.querySelector('#blog-readTime');
+  // const contentInput = document.querySelector('#content');
+  const imageInput = document.querySelector('#blog-imageUrl');
+
+  const datetimeString = blogData.date;
+
+  const formatDate = (date) => {
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+
+    return `${year}-${month}-${day}`;
+  };
+
+  const dateObject = new Date(datetimeString);
+  const formattedDate = formatDate(dateObject);
+
+  titleInput.value = blogData.title || '';
+  dateInput.value = formattedDate || '';
+  readTimeInput.value = blogData.readTime || '';
+  // contentInput.value = blogData.content || '';
+  imageInput.value = blogData.image || '';
+  localStorage.removeItem('selectedBlog');
 }
