@@ -200,6 +200,7 @@ async function saveBlog() {
 
 if (document.querySelector('.create-blog-btn')) {
   document.querySelector('.create-blog-btn').addEventListener('click', () => {
+    localStorage.removeItem('selectedBlog');
     window.location.href = 'blog-form.html';
   });
 }
