@@ -44,6 +44,10 @@ function createBlogListItem(blog) {
   const blogItem = document.createElement('li');
   blogItem.classList.add('blog-item');
 
+  const id = document.createElement('h6');
+  id.textContent = blog._id;
+  id.style.display = 'none';
+
   const img = document.createElement('img');
   img.src = blog.imageUrl;
 
@@ -52,7 +56,7 @@ function createBlogListItem(blog) {
 
   const title = document.createElement('h2');
   const titleLink = document.createElement('a');
-  // titleLink.href = `blog-details.html?id=${blog._id}`;
+
   titleLink.textContent = blog.title;
   title.appendChild(titleLink);
 
@@ -60,6 +64,7 @@ function createBlogListItem(blog) {
   dateAndReadTime.textContent = `${blog.date} - ${blog.readTime} min read`;
 
   blogDetails.appendChild(title);
+  blogDetails.appendChild(id);
   blogDetails.appendChild(dateAndReadTime);
 
   blogItem.appendChild(img);
@@ -84,6 +89,8 @@ function renderBlogList() {
 
   blogItems.forEach((item) => {
     item.addEventListener('click', () => {
+      localStorage.removeItem('selectedBlog');
+
       const inputString = item.querySelector('small').innerText;
 
       const datePattern = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/;
@@ -94,6 +101,7 @@ function renderBlogList() {
       const readTimeMatch = inputString.match(readTimePattern);
       const readTime = readTimeMatch ? parseInt(readTimeMatch[0], 10) : null;
       const blogData = {
+        id: item.querySelector('h6').innerText,
         title: item.querySelector('h2 a').innerText,
         date: date,
         readTime: readTime,
@@ -245,5 +253,4 @@ function populateForm(blogData) {
   readTimeInput.value = blogData.readTime || '';
   // contentInput.value = blogData.content || '';
   imageInput.value = blogData.image || '';
-  localStorage.removeItem('selectedBlog');
 }
