@@ -186,29 +186,16 @@ async function saveBlog() {
   const readTimeInput = document.getElementById('blog-readTime');
   const imageUrlInput = document.getElementById('blog-imageUrl');
 
-  const blog = {
-    id: parseInt(idInput.value, 10) || blogList.length + 1,
+  const blogData = JSON.parse(localStorage.getItem('selectedBlog'));
+  const blogId = blogData.id;
+  const updatedData = {
     title: titleInput.value,
     date: dateInput.value,
     readTime: parseInt(readTimeInput.value, 10),
     imageUrl: imageUrlInput.value,
   };
 
-  const existingBlogIndex = blogList.findIndex((item) => item.id === blog.id);
-  if (existingBlogIndex !== -1) {
-    blogList[existingBlogIndex] = blog;
-  } else {
-    try {
-      const createdBlog = await createBlogOnAPI(blog);
-      blogList.push(createdBlog);
-    } catch (error) {
-      alert('Error creating blog');
-      return;
-    }
-  }
-
-  alert('Blog saved successfully');
-  window.location.href = 'blog.html';
+  updateBlog(blogId, updatedData);
 }
 
 if (document.querySelector('.create-blog-btn')) {
@@ -253,4 +240,29 @@ function populateForm(blogData) {
   readTimeInput.value = blogData.readTime || '';
   // contentInput.value = blogData.content || '';
   imageInput.value = blogData.image || '';
+}
+
+async function updateBlog(blogId, updatedData) {
+  try {
+    const response = await fetch(
+      `http://localhost:5000/api/v1/blogs/${blogId}`,
+      {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedData),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+    console.log('Blog updated successfully:', responseData);
+  } catch (error) {
+    console.error('Error updating blog:', error);
+  }
+  window.location.href = 'blog.html';
 }
