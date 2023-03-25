@@ -185,15 +185,6 @@ p {
   background-color:#eff3f8 ;
   margin-bottom: 0px;
 }
-.section-center {
-  
-  /* width: 100vw; */
-  margin: 0px;
-  max-width: 100%;
-  overflow-x: hidden;
-  background:#eff3f8;
-  
-}
 .section-about {
   text-align: left;
   font-size: 2rem;
@@ -205,20 +196,22 @@ p {
   background:#eff3f8;
   
 }
+.section-center {
+  
+  /* width: 100vw; */
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background:#eff3f8;
+  
+}
+
 /* @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 } */
 /* added during recording */
-.underline {
-  width: 10rem;
-  height: 0.3rem;
-  margin-bottom: 1.25rem;
-  background: var(--primary-500);
-  margin-left: auto;
-  margin-right: auto;
-}
 .underlined {
   width: 15rem;
   height: 0.3rem;
@@ -227,6 +220,15 @@ p {
   /* margin-left: auto;
   margin-right: auto; */
 }
+.underline {
+  width: 10rem;
+  height: 0.3rem;
+  margin-bottom: 1.25rem;
+  background: var(--primary-500);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
