@@ -178,13 +178,20 @@ p {
 }
 /* section */
 .section {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
+.greybg{
+  background-color:#eff3f8 ;
+  margin-bottom: 0px;
+}
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background:#eff3f8;
+  
 }
 @media screen and (min-width: 992px) {
   .section-center {
@@ -206,10 +213,14 @@ p {
   padding-top: 10;
 }
 .bg-grey {
-  background: var(--clr-grey-10);
+  background: var(--clr-white);
 }
 .bg-darkgrey {
-  background: var(--clr-primary-10);
+  background: #efe;
+   border-radius: 10%;
+   margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 20px;
 }
 
 /*
@@ -446,6 +457,11 @@ Hero
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
       url('../images/big_office_img.jpeg') center/cover no-repeat;
+    background-attachment: fixed;
+  }
+  .contact-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733652/Cirrocloud%20web/slider%202/img3_oei5hh.jpg') center/cover no-repeat;
     background-attachment: fixed;
   }
   .hero-title {
@@ -1326,9 +1342,131 @@ input[type=submit]:hover {
 }
 
 /* Add a background color and some padding around the form */
+
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
   text-align:left;
 }
+/*contact information*/
+.contact-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: left;
+  font-family: arial;
+}
+
+.row {
+  color: black;
+  font-size: 16px;
+}
+
+.contact-card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.contact-card button:hover {
+  opacity: 0.7;
+}
+
+
+
+/* .........................contact section with two columns.................................... */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.cm {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 700px; /* Should be removed. Only for demonstration */
+  color:white;
+}
+
+/* Clear floats after the columns */
+.ro:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+/*
+/* .........................contact section with two columns ends.................................... */
+*/
+
+/* ......................contact form................... */
+
+h1 {
+  text-align: left;
+  color: #333;
+  margin-top: 50px;
+}
+
+form {
+  text-align: left;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #F5F5F5;
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* .......................contact form ends ................... */
+

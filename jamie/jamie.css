@@ -332,10 +332,10 @@
 
 /*............................partner starts  Jamal.........................*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body{
+/* body{
     font-family: 'Poppins', sans-serif !important;
     background: #eff3f8;
-}
+} change removed*/ 
 .container{
     padding-top: 20px;
 }
