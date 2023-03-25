@@ -47,6 +47,10 @@ const blogApp = {
     id.textContent = blog._id;
     id.style.display = 'none';
 
+    const content = document.createElement('p');
+    content.textContent = blog.content;
+    content.style.display = 'none';
+
     const img = document.createElement('img');
     img.src = blog.imageUrl;
 
@@ -68,6 +72,7 @@ const blogApp = {
 
     blogItem.appendChild(img);
     blogItem.appendChild(blogDetails);
+    blogItem.appendChild(content);
 
     return blogItem;
   },
@@ -109,6 +114,7 @@ const blogApp = {
           date: date,
           readTime: readTime,
           image: item.querySelector('img').getAttribute('src'),
+          content: item.querySelector('p').innerText,
         };
         localStorage.setItem('selectedBlog', JSON.stringify(blogData));
         window.location.href = 'blog-details.html';
@@ -158,7 +164,7 @@ const blogApp = {
       blogDetailTitle.innerText = selectedBlog.title;
       blogDetailDate.innerText = selectedBlog.date;
       blogDetailReadTime.innerText = selectedBlog.readTime;
-      // blogDetailContent.innerHTML = selectedBlog.content;
+      blogDetailContent.innerText = selectedBlog.content || '';
       blogDetailImage.setAttribute('src', selectedBlog.image);
     }
 
@@ -202,7 +208,7 @@ const blogApp = {
       date: dateInput.value,
       readTime: parseInt(readTimeInput.value, 10),
       imageUrl: imageUrlInput.value,
-      content: contentInput.value, 
+      content: contentInput.value,
     };
 
     const existingBlogData = JSON.parse(localStorage.getItem('selectedBlog'));
