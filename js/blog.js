@@ -195,12 +195,14 @@ const blogApp = {
     const dateInput = document.getElementById('blog-date');
     const readTimeInput = document.getElementById('blog-readTime');
     const imageUrlInput = document.getElementById('blog-imageUrl');
+    const contentInput = document.getElementById('blog-content');
 
     const blogData = {
       title: titleInput.value,
       date: dateInput.value,
       readTime: parseInt(readTimeInput.value, 10),
       imageUrl: imageUrlInput.value,
+      content: contentInput.value, 
     };
 
     const existingBlogData = JSON.parse(localStorage.getItem('selectedBlog'));
@@ -221,8 +223,8 @@ const blogApp = {
     const titleInput = document.querySelector('#blog-title');
     const dateInput = document.querySelector('#blog-date');
     const readTimeInput = document.querySelector('#blog-readTime');
-    // const contentInput = document.querySelector('#content');
     const imageInput = document.querySelector('#blog-imageUrl');
+    const contentInput = document.querySelector('#blog-content');
 
     const datetimeString = blogData.date;
 
@@ -240,8 +242,8 @@ const blogApp = {
     titleInput.value = blogData.title || '';
     dateInput.value = formattedDate || '';
     readTimeInput.value = blogData.readTime || '';
-    // contentInput.value = blogData.content || '';
     imageInput.value = blogData.image || '';
+    contentInput.value = blogData.content || '';
   },
 
   updateBlog: async function (blogId, updatedData) {
