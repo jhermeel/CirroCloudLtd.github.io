@@ -178,7 +178,7 @@ p {
 }
 /* section */
 .section {
-  padding: 2rem 0;
+  padding: 0rem 0;
 }
 
 .greybg{
@@ -186,26 +186,46 @@ p {
   margin-bottom: 0px;
 }
 .section-center {
-  width: 90vw;
-  margin: 0 auto;
+  
+  /* width: 100vw; */
+  margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
   background:#eff3f8;
   
 }
-@media screen and (min-width: 992px) {
+.section-about {
+  text-align: left;
+  font-size: 2rem;
+  
+  /* margin-left: 20px; */
+  /* margin: 0px; */
+  /* max-width: 100%; */
+  /* overflow-x: hidden; */
+  background:#eff3f8;
+  
+}
+/* @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
-}
+} */
 /* added during recording */
 .underline {
-  width: 5rem;
-  height: 0.25rem;
+  width: 10rem;
+  height: 0.3rem;
   margin-bottom: 1.25rem;
   background: var(--primary-500);
   margin-left: auto;
   margin-right: auto;
+}
+.underlined {
+  width: 15rem;
+  height: 0.3rem;
+  margin-bottom: 1.25rem;
+  background: var(--primary-500);
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 .section-title {
   margin-bottom: 4rem;
