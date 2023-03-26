@@ -33,7 +33,7 @@
 	user-select: none;
 }
 .prev:hover, .next:hover{
-	color: #00a7ff; /* blue */
+	color: #fff; /* blue */
 }
 .next{
 	right: 0;
@@ -449,6 +449,7 @@ h2{
 /*............................footer  ends  Jamal.........................*/
 
 
+/* dropdown starts */
 
 
 
