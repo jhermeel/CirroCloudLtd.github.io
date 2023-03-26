@@ -44,9 +44,6 @@ const blogApp = {
     const blogItem = document.createElement('li');
     blogItem.classList.add('menu-item');
 
-    const blogLink = document.createElement('a');
-    blogItem.appendChild(blogLink);
-
     const id = document.createElement('h6');
     id.textContent = blog._id;
     id.style.display = 'none';
@@ -61,14 +58,30 @@ const blogApp = {
     const header = document.createElement('h4');
     header.textContent = blog.title;
 
-    const content = document.createElement('p');
-    content.textContent = blog.content;
+    const underline = document.createElement('div');
+    underline.classList.add('underline');
 
-    const readMoreLink = document.createElement('a');
-    readMoreLink.textContent = "Read More";
-    content.appendChild(readMoreLink)
+    const hiddenContent = document.createElement('h5');
+
+    const articleText = blog.content || '';
+    hiddenContent.textContent = articleText;
+    hiddenContent.style.display = 'none';
+
+    const words = articleText.split(' ').slice(0, 20).join(' ');
+    const ellipsis = '...';
+    const readMoreLink = '<a href="#">Read More</a>';
+
+    const content = document.createElement('p');
+    content.textContent = words + ellipsis;
+
+    const readMoreButton = document.createElement('button');
+    readMoreButton.setAttribute('id', 'read-more');
+    readMoreButton.innerHTML = readMoreLink;
+
+    content.appendChild(readMoreButton);
 
     info.appendChild(header);
+    info.appendChild(underline);
     info.appendChild(content);
 
     const blogDetails = document.createElement('div');
@@ -83,6 +96,7 @@ const blogApp = {
     dateAndReadTime.textContent = `${blog.date} - ${blog.readTime} min read`;
 
     blogItem.appendChild(id);
+    blogItem.appendChild(hiddenContent);
     blogItem.appendChild(img);
     blogItem.appendChild(info);
     blogItem.appendChild(dateAndReadTime);
@@ -109,7 +123,7 @@ const blogApp = {
   },
 
   addClickEventListenersToBlogItems: function () {
-    const blogItems = document.querySelectorAll('.blog-item');
+    const blogItems = document.querySelectorAll('.menu-item');
 
     blogItems.forEach((item) => {
       item.addEventListener('click', () => {
@@ -126,11 +140,11 @@ const blogApp = {
         const readTime = readTimeMatch ? parseInt(readTimeMatch[0], 10) : null;
         const blogData = {
           id: item.querySelector('h6').innerText,
-          title: item.querySelector('h2 a').innerText,
+          title: item.querySelector('h4').innerText,
           date: date,
           readTime: readTime,
           image: item.querySelector('img').getAttribute('src'),
-          content: item.querySelector('p').innerText,
+          content: item.querySelector('h5').innerText,
         };
         localStorage.setItem('selectedBlog', JSON.stringify(blogData));
         window.location.href = 'blog-details.html';
@@ -139,30 +153,29 @@ const blogApp = {
   },
 
   updatePaginationButtons: function () {
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    if (this.currentPage === 0) {
-      prevBtn.disabled = true;
-    } else {
-      prevBtn.disabled = false;
-    }
-
-    if ((this.currentPage + 1) * this.itemsPerPage >= this.blogList.length) {
-      nextBtn.disabled = true;
-    } else {
-      nextBtn.disabled = false;
-    }
+    // const prevBtn = document.querySelector('.prev-btn');
+    // const nextBtn = document.querySelector('.next-btn');
+    // if (this.currentPage === 0) {
+    //   prevBtn.disabled = true;
+    // } else {
+    //   prevBtn.disabled = false;
+    // }
+    // if ((this.currentPage + 1) * this.itemsPerPage >= this.blogList.length) {
+    //   nextBtn.disabled = true;
+    // } else {
+    //   nextBtn.disabled = false;
+    // }
   },
 
   initPaginationButtons: function () {
-    document.querySelector('.prev-btn').addEventListener('click', () => {
-      this.currentPage--;
-      this.renderBlogList();
-    });
-    document.querySelector('.next-btn').addEventListener('click', () => {
-      this.currentPage++;
-      this.renderBlogList();
-    });
+    // document.querySelector('.prev-btn').addEventListener('click', () => {
+    //   this.currentPage--;
+    //   this.renderBlogList();
+    // });
+    // document.querySelector('.next-btn').addEventListener('click', () => {
+    //   this.currentPage++;
+    //   this.renderBlogList();
+    // });
   },
 
   displayBlogDetail: function () {

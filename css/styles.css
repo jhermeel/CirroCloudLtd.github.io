@@ -1525,7 +1525,7 @@ Blogs Page
   height: 20rem;
   border-top-right-radius: var(--borderRadius);
   border-top-left-radius: var(--borderRadius);
-  object-fit: cover ;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .blogs {
@@ -1559,4 +1559,23 @@ Blogs Page
   .blogs-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.menu-item h4 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: initial;
+}
+.menu-item .underline {
+  width: 5rem;
+  height: 1px;
+  background: var(--clr-grey-9);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.menu-item p {
+  color: var(--clr-grey-5);
+  line-height: 1.8;
 }
