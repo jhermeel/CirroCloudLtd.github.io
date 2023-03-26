@@ -145,10 +145,35 @@
     <!-- blog -->
     <section class="section blog">
       <button class="create-blog-btn">Create Blog</button>
-      <ul class="blog-list"></ul>
-      <div class="pagination">
-        <button class="prev-btn .blog-button">Previous</button>
-        <button class="next-btn .blog-button">Next</button>
+      <div class="blogs">
+        <div class="filters">
+          <div class="filters-container">
+            <!-- search -->
+            <form class="input-form">
+              <input type="text" class="search-input" placeholder="search..." />
+            </form>
+            <!-- categories -->
+            <h5>Company</h5>
+            <article class="companies">
+              <button class="company-btn">all</button>
+              <button class="company-btn">ikea</button>
+              <button class="company-btn">marcos</button>
+            </article>
+            <!-- price -->
+            <h5>Price</h5>
+            <form class="price-form">
+              <input
+                type="range"
+                class="price-filter"
+                min="0"
+                value="50"
+                max="100"
+              />
+            </form>
+            <span class="price-value">Value : $80</span>
+          </div>
+        </div>
+        <ul class="blog-list blogs-container"></ul>
       </div>
     </section>
     <!--end of  blog -->

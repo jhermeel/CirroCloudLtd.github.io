@@ -1518,8 +1518,14 @@ Blogs Page
   line-height: 2;
   color: var(--grey-500);
 }
-.menu-item {
+/* .menu-item {
   max-width: 25rem;
+} */
+.menu-item img {
+  height: 20rem;
+  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius);
+  object-fit: cover ;
 }
 @media screen and (min-width: 768px) {
   .blogs {

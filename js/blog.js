@@ -42,37 +42,53 @@ const blogApp = {
 
   createBlogListItem: function (blog) {
     const blogItem = document.createElement('li');
-    blogItem.classList.add('blog-item');
+    blogItem.classList.add('menu-item');
+
+    const blogLink = document.createElement('a');
+    blogItem.appendChild(blogLink);
+
     const id = document.createElement('h6');
     id.textContent = blog._id;
     id.style.display = 'none';
 
+    const img = document.createElement('img');
+    img.classList.add('img');
+    img.src = blog.imageUrl;
+
+    const info = document.createElement('div');
+    info.classList.add('item-info');
+
+    const header = document.createElement('h4');
+    header.textContent = blog.title;
+
     const content = document.createElement('p');
     content.textContent = blog.content;
-    content.style.display = 'none';
 
-    const img = document.createElement('img');
-    img.src = blog.imageUrl;
+    const readMoreLink = document.createElement('a');
+    readMoreLink.textContent = "Read More";
+    content.appendChild(readMoreLink)
+
+    info.appendChild(header);
+    info.appendChild(content);
 
     const blogDetails = document.createElement('div');
     blogDetails.classList.add('blog-details');
 
-    const title = document.createElement('h2');
-    const titleLink = document.createElement('a');
+    // const title = document.createElement('h2');
 
-    titleLink.textContent = blog.title;
-    title.appendChild(titleLink);
+    // titleLink.textContent = blog.title;
+    // title.appendChild(titleLink);
 
     const dateAndReadTime = document.createElement('small');
     dateAndReadTime.textContent = `${blog.date} - ${blog.readTime} min read`;
 
-    blogDetails.appendChild(title);
-    blogDetails.appendChild(id);
-    blogDetails.appendChild(dateAndReadTime);
-
+    blogItem.appendChild(id);
     blogItem.appendChild(img);
-    blogItem.appendChild(blogDetails);
-    blogItem.appendChild(content);
+    blogItem.appendChild(info);
+    blogItem.appendChild(dateAndReadTime);
+
+    // blogItem.appendChild(blogDetails);
+    // blogItem.appendChild(content);
 
     return blogItem;
   },
