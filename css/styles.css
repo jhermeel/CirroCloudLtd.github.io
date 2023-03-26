@@ -220,6 +220,14 @@ p {
   background:#eff3f8;
   
 }
+.adoption-center {
+  
+  /* width: 100vw; */
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background:white;
+}
 
 /* @media screen and (min-width: 992px) {
   .section-center {
@@ -527,9 +535,28 @@ Hero
     border-top-left-radius: 10%;
     border-bottom-right-radius: 10%;
     border-bottom-left-radius: 10%;
+
   }
+  .modern-photo{
+    margin-left: 2%;
+     border-top-right-radius: 10%;
+     border-top-left-radius: 10%;
+     border-bottom-right-radius: 10%;
+     border-bottom-left-radius: 10%;
+     
+ 
+   }
+  hr{
+    border: 1px solid #eff3f8;
+  }
+  .adoption-photo{
+    margin-left: 0%;
+     
+ 
+   }
 .digi-para{
 text-align: justify;
+
 
 }
 
@@ -580,6 +607,13 @@ About
   }
   .about-info {
     align-self: center;
+  }
+  .about-info {
+    align-self: center;
+  }
+  .adoption-info {
+    align-self: center;
+    background: white;
   }
 }
 
