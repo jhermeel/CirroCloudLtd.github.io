@@ -5,7 +5,9 @@ const blogApp = {
 
   fetchBlogList: async function () {
     try {
-      const response = await fetch('http://localhost:5000/api/v1/blogs');
+      const response = await fetch(
+        'https://server.cirrocloudug.com/api/v1/blogs'
+      );
       if (response.ok) {
         const data = await response.json();
         this.blogList.push(...data.blogs);
@@ -20,13 +22,16 @@ const blogApp = {
 
   createBlogOnAPI: async function (blog) {
     try {
-      const response = await fetch('http://localhost:5000/api/v1/blogs', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(blog),
-      });
+      const response = await fetch(
+        'https://server.cirrocloudug.com/api/v1/blogs',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(blog),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -87,11 +92,6 @@ const blogApp = {
     const blogDetails = document.createElement('div');
     blogDetails.classList.add('blog-details');
 
-    // const title = document.createElement('h2');
-
-    // titleLink.textContent = blog.title;
-    // title.appendChild(titleLink);
-
     const dateAndReadTime = document.createElement('small');
     dateAndReadTime.textContent = `${blog.date} - ${blog.readTime} min read`;
 
@@ -100,9 +100,6 @@ const blogApp = {
     blogItem.appendChild(img);
     blogItem.appendChild(info);
     blogItem.appendChild(dateAndReadTime);
-
-    // blogItem.appendChild(blogDetails);
-    // blogItem.appendChild(content);
 
     return blogItem;
   },
@@ -150,32 +147,6 @@ const blogApp = {
         window.location.href = 'blog-details.html';
       });
     });
-  },
-
-  updatePaginationButtons: function () {
-    // const prevBtn = document.querySelector('.prev-btn');
-    // const nextBtn = document.querySelector('.next-btn');
-    // if (this.currentPage === 0) {
-    //   prevBtn.disabled = true;
-    // } else {
-    //   prevBtn.disabled = false;
-    // }
-    // if ((this.currentPage + 1) * this.itemsPerPage >= this.blogList.length) {
-    //   nextBtn.disabled = true;
-    // } else {
-    //   nextBtn.disabled = false;
-    // }
-  },
-
-  initPaginationButtons: function () {
-    // document.querySelector('.prev-btn').addEventListener('click', () => {
-    //   this.currentPage--;
-    //   this.renderBlogList();
-    // });
-    // document.querySelector('.next-btn').addEventListener('click', () => {
-    //   this.currentPage++;
-    //   this.renderBlogList();
-    // });
   },
 
   displayBlogDetail: function () {
@@ -284,7 +255,7 @@ const blogApp = {
   updateBlog: async function (blogId, updatedData) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/blogs/${blogId}`,
+        `https://server.cirrocloudug.com/api/v1/blogs/${blogId}`,
         {
           method: 'PATCH',
           headers: {
@@ -318,4 +289,3 @@ const blogApp = {
 };
 
 blogApp.initCreateBlogButton();
-blogApp.initPaginationButtons();
