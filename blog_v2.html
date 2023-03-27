@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CirroCloud</title>
+    <!-- normalize  -->
+    <link rel="stylesheet" href="./css/normalize.css" />
 
     <!-- font-awesome -->
     <link
@@ -13,8 +15,6 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
-
   </head>
   <body>
     <!-- container -->
@@ -69,35 +69,17 @@
           <li>
             <a href="about">about us</a>
           </li>
-          <li class="dropdown">
-            <a href="services.html" class="dropbtn">services</a>
-            <div class="dropdown-content">
-              <a href="digital.html">Digital Transformation</a>
-              <a href="mordern.html">Modern Workplace</a>
-              <a href="adoption.html">Adoption And Change Management</a>
-              <a href="business.html">Business Applications</a>
-              <a href="training.html">Training</a>
-              <a href="efris.html">Application Integration With Efris</a>
-              <a href="support.html">Support And Maintainanc</a>
-              <a href="data.html">Data Visualisation</a>
-            </div>
-          </li>          
-          <li class="dropdown">
-            <a href="products.html" class="dropbtn" >Products</a>
-            <div class="dropdown-content">
-              <a href="office.html">Microsoft Office 365</a>
-              <a href="mordern.html">Dynamic 365/Nav</a>
-              <a href="adoption.html">Efris Intergrations</a>
-              <a href="business.html">Microsoft Azure</a>
-              <a href="power.html">Power Platform</a>
-              <a href="adoption.html">Products</a>
-            </div>
+          <li>
+            <a href="services">services</a>
+          </li>
+          <li>
+            <a href="Projects">projects</a>
           </li>
           <li>
             <a href="blog" class="active">blog</a>
           </li>
           <li>
-            <a href="contact">Contact Us</a>
+            <a href="contact">contact</a>
           </li>
         </ul>
       </div>
@@ -121,13 +103,13 @@
             <a href="services">services</a>
           </li>
           <li>
-            <a href="products">Products</a>
+            <a href="Projects">projects</a>
           </li>
           <li>
             <a href="blog">blog</a>
           </li>
           <li>
-            <a href="contact">Contact Us</a>
+            <a href="contact">contact</a>
           </li>
         </ul>
         <!-- social icons -->
@@ -161,41 +143,59 @@
       </div>
     </aside>
     <!-- end of sidebar -->
+
     <!-- blog -->
-    <section class="section blog">
-      <button class="create-blog-btn">Create Blog</button>
-      <div class="blogs">
-        <div class="filters">
-          <div class="filters-container">
-            <!-- search -->
-            <form class="input-form">
-              <input type="text" class="search-input" placeholder="search..." />
-            </form>
-            <!-- categories -->
-            <h5>Company</h5>
-            <article class="companies">
-              <button class="company-btn">all</button>
-              <button class="company-btn">ikea</button>
-              <button class="company-btn">marcos</button>
-            </article>
-            <!-- price -->
-            <h5>Price</h5>
-            <form class="price-form">
-              <input
-                type="range"
-                class="price-filter"
-                min="0"
-                value="50"
-                max="100"
-              />
-            </form>
-            <span class="price-value">Value : $80</span>
-          </div>
+    <section class="blogs">
+      <!-- filters -->
+      <div class="filters">
+        <div class="filters-container">
+          <!-- search -->
+          <form class="input-form">
+            <input type="text" class="search-input" placeholder="search..." />
+          </form>
+          <!-- categories -->
+          <h5>Company</h5>
+          <article class="companies">
+            <button class="company-btn">all</button>
+            <button class="company-btn">ikea</button>
+            <button class="company-btn">marcos</button>
+          </article>
+          <!-- price -->
+          <h5>Price</h5>
+          <form class="price-form">
+            <input
+              type="range"
+              class="price-filter"
+              min="0"
+              value="50"
+              max="100"
+            />
+          </form>
+          <span class="price-value">Value : $80</span>
         </div>
-        <ul class="blog-list blogs-container"></ul>
+      </div>
+      <!-- blogs -->
+      <div class="blogs-container">
+        <article class="menu-item">
+          <img
+            src="https://react-vite-projects-5-menu.netlify.app/images/item-1.jpeg"
+            alt="buttermilk pancakes"
+            class="img"
+          />
+          <div class="item-info">
+            <h4>buttermilk pancakes</h4>
+            <p>
+              I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock
+              freegan copper mug whatever cold-pressed I'm baby woke mlkshk wolf
+              bitters live-edge blue bottle, hammock freegan copper mug whatever
+              cold-pressed
+            </p>
+          </div>
+        </article>
       </div>
     </section>
     <!--end of  blog -->
+
     <footer class="footer">
       <div class="footer-col">
         <h3>Contact Us</h3>
@@ -226,12 +226,11 @@
       <div class="footer-col">
         <h3>Our Pages</h3>
         <ul>
-
           <li><a href="index.html"> Home</a></li>
           <li><a href="about.html"> About Us</a></li>
           <li><a href="services.html"> Services</a></li>
           <li><a href="blog.html"> Blog</a></li>
-          <li><a href="products.html"> Products</a></li>
+          <li><a href="projects.html"> Projects</a></li>
           <li><a href="contact.html"> Contact Us</a></li>
           <li><a href="contact.html"> Careers</a></li>
           <br /><br />

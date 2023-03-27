@@ -51,12 +51,17 @@ Variables
   --clr-white: #fff;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
+  --ff-tertiary: 'Jost', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
+  --fixed-width: 600px;
+  --fluid-width: 90vw;
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
 }
 /*
 =============== 
@@ -128,9 +133,7 @@ p {
   h4 {
     font-size: 1rem;
   }
-  body {
-    font-size: 1rem;
-  }
+
   h1,
   h2,
   h3,
@@ -1074,14 +1077,11 @@ Blog
 ===============   ===============
 Top Nav added code starts , jamal
 ===============  ===============
-*/  
-
+*/
 
 /* set the font size and icon size to 10px */
 .banner-social-icon i {
   font-size: 12px;
-
-
 }
 
 .caption-text {
@@ -1091,9 +1091,8 @@ Top Nav added code starts , jamal
 /* make the top nav small */
 .nav-banner {
   height: 20px;
-  padding-top:5px;
-  padding-bottom:8px;
-
+  padding-top: 5px;
+  padding-bottom: 8px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1101,28 +1100,27 @@ Top Nav added code starts , jamal
   .banner-item {
     display: none;
   }
-  
+
   /* make the top nav small */
   .nav-banner {
     height: 50px;
   }
-  
+
   /* set the font size and icon size to 6px */
   .banner-social-icon i {
     font-size: 6px;
   }
-  
+
   .caption-text {
     font-size: 6px;
   }
 }
 
-
 /*
 ===============   ===============
 To nav added code ends  , jamal
 ===============   ===============
-*/ 
+*/
 
 /*===============     ===============.
 Products added  code  starts  Jamal
@@ -1130,7 +1128,6 @@ Products added  code  starts  Jamal
 * {
   box-sizing: border-box;
 }
-
 
 /* Float four columns side by side */
 .col {
@@ -1141,11 +1138,13 @@ Products added  code  starts  Jamal
 }
 
 /* Remove extra left and right margins, due to padding */
-.rw {margin: 0 15px;}
+.rw {
+  margin: 0 15px;
+}
 
 /* Clear floats after the columns */
 .rw:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -1170,8 +1169,6 @@ Products added  code  starts  Jamal
 Products added   code ends  Jamal
 ===============     =============== */
 
-
-
 /*
 =============== 
 Footer added code, jamal
@@ -1182,7 +1179,7 @@ Footer added code, jamal
   padding-left: 40px;
   padding-top: 40px;
   margin-top: 40px;
-/*  padding: 50px 0;*/
+  /*  padding: 50px 0;*/
 }
 
 .footer-col {
@@ -1209,7 +1206,7 @@ Footer added code, jamal
 }
 
 .footer ul li a {
-  font-size:0.8rem;
+  font-size: 0.8rem;
   color: #ccc;
   text-decoration: none;
 }
@@ -1220,17 +1217,17 @@ Footer added code, jamal
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .footer-col {
     flex: 1;
     margin: 0 15px;
     text-align: left;
   }
-  
+
   .footer-col:first-child {
     text-align: left;
   }
-  
+
   .footer h3 {
     text-align: left;
     margin-bottom: 20px;
@@ -1400,14 +1397,303 @@ Products Page
 }
 
 .team-item span {
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   color: rgb(17, 173, 139);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .team-item img {
   width: 80px;
 }
+
+.blog-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.blog-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-details h2 {
+  margin: 0;
+}
+
+.blog-details small {
+  margin-top: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.blog-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Add the following styles to your styles.css file */
+
+.blog-detail {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.blog-detail-image {
+  width: 100%;
+  height: auto;
+}
+
+.blog-detail-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.blog-form label {
+  margin: 10px 0;
+}
+
+.blog-form input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.blog-form button {
+  margin-top: 20px;
+}
+
+/*
+=============== 
+Blogs Page
+===============
+*/
+.blog-img {
+  height: 15rem;
+  border-radius: var(--borderRadius);
+}
+.blog-container {
+  position: relative;
+}
+.blog-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: flex;
+  transition: var(--transition);
+}
+.blog-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--primary-500);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 1rem;
+  border-color: transparent;
+  margin: 0 0.5rem;
+}
+.blog-icon:hover {
+  background: var(--primary-700);
+}
+.blog-container:hover .blog-icons {
+  opacity: 1;
+}
+.blogs {
+  width: var(--fluid-width);
+  display: grid;
+  grid-gap: 1rem;
+  margin: 4rem auto;
+  max-width: var(--max-width);
+}
+
+.filters h5 {
+  font-weight: 500;
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  background: var(--clr-grey-9);
+  border-radius: var(--borderRadius);
+  border-color: transparent;
+  letter-spacing: var(--letterSpacing);
+}
+
+.company-btn {
+  display: block;
+  margin: 0.25em 0;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  background: transparent;
+  border-color: transparent;
+  letter-spacing: var(--letterSpacing);
+  color: var(--clr-grey-5);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.85rem;
+}
+.company-btn:hover {
+  color: var(--clr-grey-2);
+}
+.price-value {
+  color: var(--clr-grey-5);
+  letter-spacing: var(--letterSpacing);
+}
+.blog-name {
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  color: var(--clr-grey-5);
+}
+.blog-price {
+  margin-bottom: 0;
+  color: var(--clr-grey-2);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: var(--letterSpacing);
+}
+.blog footer {
+  padding: 0.75rem 0;
+  text-align: center;
+}
+.blog-item {
+  display: grid;
+  gap: 1rem 2rem;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+}
+.blog-item .img {
+  height: 15rem;
+  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius);
+}
+.item-info {
+  padding: 1.5rem;
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.item-info h5 {
+  font-weight: 500;
+}
+.item-price {
+  background: var(--primary-500);
+  color: var(--white);
+  padding: 0.25rem 0.5rem;
+  letter-spacing: var(--letterSpacing);
+  border-radius: var(--borderRadius);
+  align-self: flex-start;
+}
+.item-text {
+  line-height: 2;
+  color: var(--grey-500);
+}
+/* .menu-item {
+  max-width: 25rem;
+} */
+.menu-item img {
+  height: 20rem;
+  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius);
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .blogs {
+    grid-template-columns: 200px 1fr;
+  }
+  .filters-container {
+    position: sticky;
+    top: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .blogs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .blogs-container .blog-img {
+    height: 10rem;
+  }
+  .blogs-container .blog-name {
+    font-size: 0.85rem;
+  }
+  .blogs-container .blog-price {
+    font-size: 0.85rem;
+  }
+  .menu-item {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .blogs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.menu-item h4 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: initial;
+}
+.menu-item .underline {
+  width: 5rem;
+  height: 1px;
+  background: var(--clr-grey-9);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.menu-item p {
+  color: var(--clr-grey-5);
+  line-height: 1.8;
+}
+
 /*just contact form*/
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -1567,4 +1853,3 @@ input[type="submit"]:hover {
 }
 
 /* .......................contact form ends ................... */
-
