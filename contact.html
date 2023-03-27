@@ -13,6 +13,8 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
+
   </head>
   <body>
     <!-- container -->
@@ -67,17 +69,35 @@
           <li>
             <a href="about">about us</a>
           </li>
-          <li>
-            <a href="services">services</a>
+          <li class="dropdown active">
+            <a href="services.html" class="dropbtn">services</a>
+            <div class="dropdown-content">
+              <a href="digital.html">Digital Transformation</a>
+              <a href="mordern.html">Modern Workplace</a>
+              <a href="adoption.html">Adoption And Change Management</a>
+              <a href="business.html">Business Applications</a>
+              <a href="training.html">Training</a>
+              <a href="efris.html">Application Integration With Efris</a>
+              <a href="support.html">Support And Maintainanc</a>
+              <a href="data.html">Data Visualisation</a>
+            </div>
           </li>
-          <li>
-            <a href="Projects">projects</a>
+          <li class="dropdown">
+            <a href="products.html" class="dropbtn" >Products</a>
+            <div class="dropdown-content">
+              <a href="office.html">Microsoft Office 365</a>
+              <a href="mordern.html">Dynamic 365/Nav</a>
+              <a href="adoption.html">Efris Intergrations</a>
+              <a href="business.html">Microsoft Azure</a>
+              <a href="power.html">Power Platform</a>
+              <a href="adoption.html">Products</a>
+            </div>
           </li>
           <li>
             <a href="blog">blog</a>
           </li>
           <li >
-            <a href="contact" class="active">contact</a>
+            <a href="contact" class="active">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -98,16 +118,16 @@
             <a href="about">about us</a>
           </li>
           <li>
-            <a href="Projects">services</a>
+            <a href="products">services</a>
           </li>
           <li>
-            <a href="Projects">projects</a>
+            <a href="products">Products</a>
           </li>
           <li>
             <a href="blog">blog</a>
           </li>
           <li>
-            <a href="contact">contact</a>
+            <a href="contact">Contact Us</a>
           </li>
         </ul>
         <!-- social icons -->
@@ -141,41 +161,64 @@
       </div>
     </aside>
     <!-- end of sidebar -->
-
+    <hr>
     <!-- connect -->
-    <section class="connect">
-      <video
-        controls
-        autoplay
-        muted
-        loop
-        class="video-container"
-        poster="./images/project-1.jpeg"
-      >
-        <source src="./videos/connect.mp4" type="video/mp4" />
-        Sorry, your browser does not support embedded videos
-      </video>
-      <div class="video-banner">
-        <!-- section title -->
-        <div class="section-title">
-          <h2>let's get in touch</h2>
-          <div class="underline"></div>
-        </div>
-        <!--end of section title -->
-        <p class="video-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione
-          perferendis exercitationem sit. Beatae eius commodi officiis rem
-          soluta ratione dignissimos quisquam tempore laudantium, porro vitae
-          cupiditate dicta magni quas corrupti aperiam, rerum minus odio totam
-          repellendus delectus nostrum veniam!
-        </p>
-        <a href="contact" class="btn">contact us</a>
-      </div>
-    </section>
+    
     <!-- end of connect -->
-<!-- footer  starts-->
 
-<footer class="footer">
+
+
+    <!-- .................nonsense starts ......................  ......--> 
+
+    <header class="contact-bg">
+      <div class="hero-banner">
+        <div class="ro">
+          <div class="cm" style="padding-left: 10px; padding-top:100px;text-align: left;">
+            <p><a href="https://www.web.whatsapp.com" class="social-icon" style="color: #0066ff">
+              <i class="fa-solid fa-phone"></i><span style="padding-left: 5px; color:white"> +256708001001 </span></a></p><br>
+            <p><a href="https://www.web.whatsapp.com" class="social-icon" style="color: #0066ff;">
+              <i class="fa-brands fa-whatsapp"></i><span style="padding-left: 5px; color:white">  +256778026599 </span></a> </p><br>
+            <p><a href="mailto:info@cirrocloudug.com" class="social-icon" style="color: #0066ff">
+              <i class="fa-solid fa-envelope"></i><span style="padding-left: 5px; color:white"> info@cirrocloudug.com </span></a></p><br>
+            <p><a href="#" class="social-icon" style="color: #0066ff">
+              <i class="fa-solid fa-location-dot"></i><span style="padding-left: 5px; color:white"> Bukoto St, 29</span></a></p><br>
+            <p><a href="#" class="social-icon" style="color: #0066ff">
+              <i class="fa-solid fa-fax"></i><span style="padding-left: 5px; color:white"> P. O. Box 116316, Kampala, Uganda</span></p>
+          </div>
+          <div class="cm">
+            <form id="contact-form" method="post" action="#">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+          
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+          
+            <div class="alert" id="alert">
+              Thank you for your message! We'll be in touch soon.
+            </div>
+          
+          </div>
+        </div>
+      </div>
+   
+  <!-- ......................nonsense ends  ............................-->
+
+
+   
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <!-- footer  starts-->
+
+ <footer class="footer" style="background-image: url(images/fbg.png)">
   <div class="footer-col">  
       <h3>Contact Us</h3>
        <ul>
@@ -186,7 +229,7 @@
     </ul><br>
     <ul>
       <li><a href="index.html"><img src="./images/logo_no_slogan.svg" alt="Image" class="img-fluid"></a></li>
-       <li><a href="#">CirroCloud Solutions aims to provide efficient and Cost-Effective Cloud services.</a></li>
+       <li><a href="#">Enhance Effeciency to drive business value</a></li>
    </ul>
   </div>
   <div class="footer-col">
@@ -196,7 +239,7 @@
           <li><a href="about.html"> About Us</a></li>
           <li><a href="services.html"> Services</a></li>
           <li><a href="blog.html"> Blog</a></li>
-          <li><a href="projects.html"> Projects</a></li>
+          <li><a href="products.html"> Products</a></li>
           <li><a href="contact.html"> Contact Us</a></li>
           <li><a href="contact.html"> Careers</a></li><br><br>
     </ul>
@@ -239,11 +282,27 @@
   </div>
   
 </footer>
-<li style="background-color:#bbb; text-align: center; color: blue; font-size: 0.8rem;
+<li style=" background-color:black ; text-align: center; color: blue; font-size: 0.8rem;
 ;padding-bottom: 10px;padding-top: 10px;"><a href="#"> Copyright ©2023 All rights reserved | CirroCloud Solutions </a></li>
 <script src="./js/app.js"></script>
 
-<!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GNHVFN0CGQ"></script>
- <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GNHVFN0CGQ'); </script>has context menuComposeParagraph  </body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());  gtag('config', 'G-5K9EZMW5T3');
+</script>
+
+<script>
+		const form = document.getElementById('contact-form');
+		const alert = document.getElementById('alert');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			alert.style.display = 'block';
+			form.reset();
+		});
+	</script>
+  </body>
 </html>

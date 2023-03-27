@@ -13,8 +13,9 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
-  </head>
+    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
 
+  </head>
   <body>
     <!-- container -->
     <div class="nav-banner">
@@ -68,17 +69,38 @@
           <li>
             <a href="about" class="active">about us</a>
           </li>
-          <li>
-            <a href="services">services</a>
+          <li class="dropdown">
+            <a href="services.html" class="dropbtn">services</a>
+            <div class="dropdown-content">
+              <a href="digital.html">Digital Transformation</a>
+              <a href="mordern.html">Modern Workplace</a>
+              <a href="adoption.html">Adoption And Change Management</a>
+              <a href="business.html">Business Applications</a>
+              <a href="training.html">Training</a>
+              <a href="efris.html">Application Integration With Efris</a>
+              <a href="support.html">Support And Maintainanc</a>
+              <a href="data.html">Data Visualisation</a>
+            </div>
           </li>
-          <li>
-            <a href="Projects">projects</a>
+          
+          
+          
+          <li class="dropdown">
+            <a href="products.html" class="dropbtn" >Products</a>
+            <div class="dropdown-content">
+              <a href="office.html">Microsoft Office 365</a>
+              <a href="mordern.html">Dynamic 365/Nav</a>
+              <a href="adoption.html">Efris Intergrations</a>
+              <a href="business.html">Microsoft Azure</a>
+              <a href="power.html">Power Platform</a>
+              <a href="adoption.html">Products</a>
+            </div>
           </li>
           <li>
             <a href="blog">blog</a>
           </li>
-          <li>
-            <a href="contact">contact</a>
+          <li >
+            <a href="contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -99,16 +121,16 @@
             <a href="about">about us</a>
           </li>
           <li>
-            <a href="services">services</a>
+            <a href="products">services</a>
           </li>
           <li>
-            <a href="Projects">projects</a>
+            <a href="products">Products</a>
           </li>
           <li>
             <a href="blog">blog</a>
           </li>
           <li>
-            <a href="contact">contact</a>
+            <a href="contact">Contact Us</a>
           </li>
         </ul>
         <!-- social icons -->
@@ -142,29 +164,54 @@
       </div>
     </aside>
     <!-- end of sidebar -->
-
-    <section class="section single-page">
-      <!-- section title -->
-      <div class="section-title">
-        <h1>about us</h1>
-        <div class="underline"></div>
-      </div>
-      <!--end of section title -->
-      <div class="section-center page-info">
-        <!-- about page -->
-        <p>
-          CIRROCLOUD SOLUTIONS is a modern and innovative business IT firm whose
-          core purpose is to drive business value through improving operational
-          efficiency, enhancing customer experience, drive innovation, empower
-          employees, and make informed decisions. We strive to meet the
-          ever-changing, unique, and diverse needs of our clients. CirroCloud's
-          aim is to employ technology to dramatically improve a current service
-          rather than simply digitally replicating it, therefore decreasing
-          operating costs. Our multi-disciplinary team of IT personnel has
-          skillset and experience in multiple areas
-        </p>
-      </div>
+    <!-- connect -->
+    <hr>
+    <!-- end of connect -->
+    <!-- start of about -->
+    
+       <section class="section about section-center">
+        <div class="section-about">
+          <h2 class="section-about">About Us</h2>
+          <div class="underlined"></div>
+        </div>
+      <div class="section-center about-center">
+         <!-- <div class="section-title about-title">
+          <h2>about</h2>
+          <div class="underline"></div>
+         </div> -->
+         <!-- <div class="section-center timeline-center"> -->
+          <!-- single timeline item -->
+          <article class="timeline-item">
+           <p>Cirrocloud Solutions is dedicated to providing high-quality services and solutions to clients across a range of industries. We are a team of experienced IT professionals who are passionate about leveraging cloud technologies to help clients achieve their business goals.
+            </p>
+            <span class="number"> 1 </span>
+          </article>
+          <!-- end of  single timeline item -->
+          <!-- single timeline item -->
+          <article class="timeline-item">
+            <p>
+              Our company has deep expertise in cloud technologies, including Microsoft 365, Azure, Dynamics NAV and 365, Power Platform, and more. We are committed to staying up to date with the latest developments in the cloud ecosystem, so that we can provide clients with cutting-edge solutions that deliver real value.
+            </p>
+            <span class="number"> 2 </span>
+          </article>
+         <article class="timeline-item">
+           <p>we pride ourselves on our collaborative and customer-centric approach. We work closely with clients to understand their unique needs and goals, and we tailor our services to meet those needs in the most efficient and effective way possible. We believe that communication and transparency are key to building strong relationships with clients.
+            </p>
+            <span class="number"> 3</span>
+          </article>
+          <!-- end of  single timeline item -->
+          <!-- single timeline item -->
+          <article class="timeline-item">
+            <p>
+              We also understand the importance of security and compliance in today's digital landscape. That's why we prioritize security and compliance in everything we do, and we work closely with clients to ensure that their systems are secure and compliant with relevant regulations and standards. 
+            </p>
+            <span class="number"> 4</span>
+          </article>
+          </div>
     </section>
+
+
+    <!-- end of  about -->
     <section class="section bg-grey">
       <!-- section title -->
       <div class="section-title">
@@ -250,14 +297,9 @@
         </div>
       </div>
     </section>
-    <!-- ############## -->
-    <!-- ############## -->
-    <!-- ############## -->
-    <!-- ############## -->
+ <!-- footer  starts-->
 
-   <!-- footer  starts-->
-
-<footer class="footer">
+ <footer class="footer" style="background-image: url(images/fbg.png)">
   <div class="footer-col">  
       <h3>Contact Us</h3>
        <ul>
@@ -268,7 +310,7 @@
     </ul><br>
     <ul>
       <li><a href="index.html"><img src="./images/logo_no_slogan.svg" alt="Image" class="img-fluid"></a></li>
-       <li><a href="#">CirroCloud Solutions aims to provide efficient and Cost-Effective Cloud services.</a></li>
+       <li><a href="#">Enhance Effeciency to drive business value</a></li>
    </ul>
   </div>
   <div class="footer-col">
@@ -278,7 +320,7 @@
           <li><a href="about.html"> About Us</a></li>
           <li><a href="services.html"> Services</a></li>
           <li><a href="blog.html"> Blog</a></li>
-          <li><a href="projects.html"> Projects</a></li>
+          <li><a href="products.html"> Products</a></li>
           <li><a href="contact.html"> Contact Us</a></li>
           <li><a href="contact.html"> Careers</a></li><br><br>
     </ul>
@@ -321,12 +363,16 @@
   </div>
   
 </footer>
-<li style="background-color:#bbb; text-align: center; color: blue; font-size: 0.8rem;
+<li style=" background-color:black ; text-align: center; color: blue; font-size: 0.8rem;
 ;padding-bottom: 10px;padding-top: 10px;"><a href="#"> Copyright ©2023 All rights reserved | CirroCloud Solutions </a></li>
 <script src="./js/app.js"></script>
 
 <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNHVFN0CGQ"></script>
-  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GNHVFN0CGQ'); </script>has context menuComposeParagraph
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());  gtag('config', 'G-5K9EZMW5T3');
+</script>
   </body>
 </html>
