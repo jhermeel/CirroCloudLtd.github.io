@@ -446,6 +446,32 @@ h2{
 
 /*............................partner  ends  Jamal.........................*/ 
 
+/*............................Dynamics nav page starts   Jamal.........................*/ 
+
+/* Default styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -70px;
+}
+
+.column {
+  flex-basis: 50%;
+  padding: 10px;
+  margin-bottom: 20px; /* add a margin bottom */
+}
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+  .column {
+    flex-basis: 100%;
+  }
+}
+
+
+
+/*............................Dynamics nav page starts   Jamal.........................*/ 
+
 
 /*............................footer  starts  Jamal.........................*/ 
 .footer {
