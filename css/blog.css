@@ -1608,6 +1608,12 @@ Blogs Page
 .item-info h5 {
   font-weight: 500;
 }
+.item-info h4 {
+  font-size: 1.5rem;
+}
+.item-info p {
+  font-size: 1rem;
+}
 .item-price {
   background: var(--primary-500);
   color: var(--white);

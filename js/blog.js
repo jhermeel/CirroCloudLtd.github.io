@@ -171,9 +171,10 @@ const blogApp = {
 
       const renderedContent = marked.parse(selectedBlog.content || '');
 
+      const formattedTime = this.formatDateToString(selectedBlog.date);
+
       blogDetailTitle.innerText = selectedBlog.title;
-      blogDetailDate.innerText = selectedBlog.date;
-      blogDetailReadTime.innerText = selectedBlog.readTime;
+      blogDetailDate.innerText = formattedTime;
       blogDetailContent.innerHTML = renderedContent;
       blogDetailImage.setAttribute('src', selectedBlog.imageUrl);
     }

@@ -874,6 +874,7 @@ Products Page
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   color: var(--clr-black-text);
+  font-size: 18px;
 }
 .blog-detail h3 {
   display: block;
@@ -903,4 +904,10 @@ Products Page
   font-weight: bold;
   letter-spacing: normal;
   color: var(--primary-900);
+}
+.blog-detail-date {
+  display: block;
+  text-align: end;
+  font-size: 1rem;
+  color: var(--primary-400);
 }
