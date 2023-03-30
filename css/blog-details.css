@@ -874,6 +874,7 @@ Products Page
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   color: var(--clr-black-text);
+  font-size: 18px;
 }
 .blog-detail h3 {
   display: block;
