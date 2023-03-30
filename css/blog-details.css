@@ -904,3 +904,9 @@ Products Page
   letter-spacing: normal;
   color: var(--primary-900);
 }
+.blog-detail-date {
+  display: block;
+  text-align: end;
+  font-size: 1rem;
+  color: var(--primary-400);
+}
