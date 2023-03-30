@@ -49,6 +49,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
+  --clr-black-text: #212121;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
   --ff-tertiary: 'Jost', sans-serif;
@@ -77,7 +78,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-tertiary);
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -102,7 +103,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-tertiary);
 }
 h1 {
   font-size: 3rem;
@@ -872,6 +873,7 @@ Products Page
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  color: var(--clr-black-text);
 }
 .blog-detail h3 {
   display: block;
@@ -882,6 +884,7 @@ Products Page
   margin-inline-end: 0px;
   font-weight: bold;
   letter-spacing: normal;
+  color: var(--primary-900);
 }
 .blog-detail li {
   display: list-item;
@@ -899,4 +902,5 @@ Products Page
   margin-inline-end: 0px;
   font-weight: bold;
   letter-spacing: normal;
+  color: var(--primary-900);
 }
