@@ -74,14 +74,28 @@ const blogApp = {
 
     const words = articleText.split(' ').slice(0, 20).join(' ');
     const ellipsis = '...';
-    const readMoreLink = '<a href="#">Read More</a>';
+    const readMoreLink =
+      'Read More <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M284.9 412.6l138.1-134c6-5.8 9-13.7 9-22.4v-.4c0-8.7-3-16.6-9-22.4l-138.1-134c-12-12.5-31.3-12.5-43.2 0-11.9 12.5-11.9 32.7 0 45.2l83 79.4h-214c-17 0-30.7 14.3-30.7 32 0 18 13.7 32 30.6 32h214l-83 79.4c-11.9 12.5-11.9 32.7 0 45.2 12 12.5 31.3 12.5 43.3 0z"></path></svg>';
 
     const content = document.createElement('p');
     content.textContent = words + ellipsis;
 
-    const readMoreButton = document.createElement('button');
+    const readMoreButton = document.createElement('a');
     readMoreButton.setAttribute('id', 'read-more');
     readMoreButton.innerHTML = readMoreLink;
+
+    const blogFooter = document.createElement('footer');
+    const blogFooterSpanOne = document.createElement('span');
+    blogFooterSpanOne.classList.add('date');
+    const dateSvg =
+      '<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>';
+    const formattedTime = this.formatDateToString(blog.date);
+    blogFooterSpanOne.innerHTML = dateSvg + formattedTime;
+    const blogFooterSpanTwo = document.createElement('span');
+
+    blogFooterSpanTwo.innerHTML = `${blog.readTime}<!-- --> min read`;
+    blogFooter.appendChild(blogFooterSpanOne);
+    blogFooter.appendChild(blogFooterSpanTwo);
 
     content.appendChild(readMoreButton);
 
@@ -99,7 +113,7 @@ const blogApp = {
     blogItem.appendChild(hiddenContent);
     blogItem.appendChild(img);
     blogItem.appendChild(info);
-    blogItem.appendChild(dateAndReadTime);
+    blogItem.appendChild(blogFooter);
 
     return blogItem;
   },
@@ -126,23 +140,17 @@ const blogApp = {
       item.addEventListener('click', () => {
         localStorage.removeItem('selectedBlog');
 
-        const inputString = item.querySelector('small').innerText;
-
+        let blogData = this.blogList.find(
+          (blog) => blog._id === item.querySelector('h6').innerText
+        );
+        console.log(blogData);
+        console.log(this.blogList);
         const datePattern = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/;
-        const dateMatch = inputString.match(datePattern);
+        const dateMatch = blogData.date.match(datePattern);
         const date = dateMatch ? dateMatch[0] : null;
 
-        const readTimePattern = /\d+(?=\s*min)/;
-        const readTimeMatch = inputString.match(readTimePattern);
-        const readTime = readTimeMatch ? parseInt(readTimeMatch[0], 10) : null;
-        const blogData = {
-          id: item.querySelector('h6').innerText,
-          title: item.querySelector('h4').innerText,
-          date: date,
-          readTime: readTime,
-          image: item.querySelector('img').getAttribute('src'),
-          content: item.querySelector('h5').innerText,
-        };
+        blogData.date = date;
+
         localStorage.setItem('selectedBlog', JSON.stringify(blogData));
         window.location.href = 'blog-details.html';
       });
@@ -165,7 +173,7 @@ const blogApp = {
       blogDetailDate.innerText = selectedBlog.date;
       blogDetailReadTime.innerText = selectedBlog.readTime;
       blogDetailContent.innerText = selectedBlog.content || '';
-      blogDetailImage.setAttribute('src', selectedBlog.image);
+      blogDetailImage.setAttribute('src', selectedBlog.imageUrl);
     }
 
     const editButton = document.querySelector('.edit-btn');
@@ -215,7 +223,7 @@ const blogApp = {
 
     if (existingBlogData) {
       // Update an existing blog
-      const blogId = existingBlogData.id;
+      const blogId = existingBlogData._id;
       await this.updateBlog(blogId, blogData);
     } else {
       // Create a new blog
@@ -248,7 +256,7 @@ const blogApp = {
     titleInput.value = blogData.title || '';
     dateInput.value = formattedDate || '';
     readTimeInput.value = blogData.readTime || '';
-    imageInput.value = blogData.image || '';
+    imageInput.value = blogData.imageUrl || '';
     contentInput.value = blogData.content || '';
   },
 
@@ -285,6 +293,73 @@ const blogApp = {
           window.location.href = 'blog-form.html';
         });
     }
+  },
+  formatDateToString: function (dateString) {
+    const date = new Date(dateString);
+    const monthNames = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+
+    const day = date.getDate();
+    const monthIndex = date.getMonth();
+    const year = date.getFullYear();
+
+    const ordinal = (day) => {
+      if (day > 3 && day < 21) return 'th';
+      switch (day % 10) {
+        case 1:
+          return 'st';
+        case 2:
+          return 'nd';
+        case 3:
+          return 'rd';
+        default:
+          return 'th';
+      }
+    };
+
+    return `${monthNames[monthIndex]}, ${day}${ordinal(day)} ${year}`;
+  },
+  formatStringToDate: function (formattedString) {
+    const regex = /^(\w+),\s+(\d+)(?:\w+)\s+(\d+)$/i;
+    const matches = regex.exec(formattedString);
+
+    if (!matches) {
+      throw new Error('Invalid formatted date string');
+    }
+
+    const monthNames = {
+      January: 0,
+      February: 1,
+      March: 2,
+      April: 3,
+      May: 4,
+      June: 5,
+      July: 6,
+      August: 7,
+      September: 8,
+      October: 9,
+      November: 10,
+      December: 11,
+    };
+
+    const year = parseInt(matches[3], 10);
+    const month = monthNames[matches[1]];
+    const day = parseInt(matches[2], 10);
+
+    const date = new Date(year, month, day);
+    return date.toISOString();
   },
 };
 

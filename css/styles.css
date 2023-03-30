@@ -199,37 +199,33 @@ p {
   padding: 0rem 0;
 }
 
-.greybg{
-  background-color:#eff3f8 ;
+.greybg {
+  background-color: #eff3f8;
   margin-bottom: 0px;
 }
 .section-about {
   text-align: left;
   font-size: 2rem;
-  
+
   /* margin-left: 20px; */
   /* margin: 0px; */
   /* max-width: 100%; */
   /* overflow-x: hidden; */
-  background:#eff3f8;
-  
+  background: #eff3f8;
 }
 .section-center {
-  
   /* width: 100vw; */
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background:#eff3f8;
-  
+  background: #eff3f8;
 }
 .adoption-center {
-  
   /* width: 100vw; */
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background:white;
+  background: white;
 }
 
 /* @media screen and (min-width: 992px) {
@@ -265,8 +261,8 @@ p {
 }
 .bg-darkgrey {
   background: #efe;
-   border-radius: 10%;
-   margin-left: 400px;
+  border-radius: 10%;
+  margin-left: 400px;
   margin-right: 400px;
   margin-top: 20px;
 }
@@ -509,7 +505,8 @@ Hero
   }
   .contact-bg {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733652/Cirrocloud%20web/slider%202/img3_oei5hh.jpg') center/cover no-repeat;
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733652/Cirrocloud%20web/slider%202/img3_oei5hh.jpg')
+        center/cover no-repeat;
     background-attachment: fixed;
   }
   .hero-title {
@@ -532,37 +529,29 @@ Hero
   }
 
   /* digital transformation start */
-  .digi-photo{
-   margin-left: 2%;
+  .digi-photo {
+    margin-left: 2%;
     border-top-right-radius: 10%;
     border-top-left-radius: 10%;
     border-bottom-right-radius: 10%;
     border-bottom-left-radius: 10%;
-
   }
-  .modern-photo{
+  .modern-photo {
     margin-left: 2%;
-     border-top-right-radius: 10%;
-     border-top-left-radius: 10%;
-     border-bottom-right-radius: 10%;
-     border-bottom-left-radius: 10%;
-     
- 
-   }
-  hr{
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+  hr {
     border: 1px solid #eff3f8;
   }
-  .adoption-photo{
+  .adoption-photo {
     margin-left: 0%;
-     
- 
-   }
-.digi-para{
-text-align: justify;
-
-
-}
-
+  }
+  .digi-para {
+    text-align: justify;
+  }
 
   /* digital transformation end  */
 
@@ -1460,7 +1449,6 @@ Products Page
 /* Add the following styles to your styles.css file */
 
 .blog-detail {
-  text-align: center;
   max-width: 800px;
   margin: 20px auto;
 }
@@ -1540,7 +1528,7 @@ Blogs Page
 .blogs {
   width: var(--fluid-width);
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   margin: 4rem auto;
   max-width: var(--max-width);
 }
@@ -1654,7 +1642,7 @@ Blogs Page
   .blogs-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
   .blogs-container .blog-img {
     height: 10rem;
@@ -1676,9 +1664,10 @@ Blogs Page
 }
 
 .menu-item h4 {
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 1rem;
   text-transform: initial;
+  letter-spacing: normal;
 }
 .menu-item .underline {
   width: 5rem;
@@ -1695,33 +1684,34 @@ Blogs Page
 }
 
 /*just contact form*/
-input[type=text], select, textarea {
+input[type='text'],
+select,
+textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+input[type='submit'] {
   background-color: #387fcf;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  text-align:left;
+  text-align: left;
 }
 .lebo {
-
- text-align:left;
+  text-align: left;
 }
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+input[type='submit']:hover {
   background-color: #99af4a;
 }
 
@@ -1731,7 +1721,7 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  text-align:left;
+  text-align: left;
 }
 /*contact information*/
 .contact-card {
@@ -1763,8 +1753,6 @@ input[type=submit]:hover {
   opacity: 0.7;
 }
 
-
-
 /* .........................contact section with two columns.................................... */
 
 * {
@@ -1777,15 +1765,14 @@ input[type=submit]:hover {
   width: 50%;
   padding: 10px;
   height: 700px; /* Should be removed. Only for demonstration */
-  color:white;
+  color: white;
 }
 
 /* Clear floats after the columns */
 .ro:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
-  
 }
 /*
 /* .........................contact section with two columns ends.................................... */
@@ -1805,7 +1792,7 @@ form {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }
 
@@ -1815,19 +1802,21 @@ label {
   color: #333;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type='text'],
+input[type='email'],
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   color: #333;
   font-size: 16px;
   margin-bottom: 20px;
-  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -1836,16 +1825,16 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-color: #555;
 }
 
 .alert {
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   margin-top: 20px;
   border-radius: 5px;
@@ -1853,3 +1842,33 @@ input[type="submit"]:hover {
 }
 
 /* .......................contact form ends ................... */
+
+#read-more {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  font-weight: 700;
+  color: var(--primary-500);
+  padding-bottom: 0.1rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.menu-item footer {
+  border-top: 1px solid var(--clr-grey-9);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  color: var(--clr-grey-5);
+}
+.menu-item footer .date {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.menu-item footer .date .icon {
+  color: var(--primary-500);
+  margin-right: 0.5rem;
+}
