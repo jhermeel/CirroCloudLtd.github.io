@@ -169,10 +169,12 @@ const blogApp = {
       const blogDetailContent = document.querySelector('.blog-detail-content');
       const blogDetailImage = document.querySelector('.blog-detail-image');
 
+      const renderedContent = marked.parse(selectedBlog.content || '');
+
       blogDetailTitle.innerText = selectedBlog.title;
       blogDetailDate.innerText = selectedBlog.date;
       blogDetailReadTime.innerText = selectedBlog.readTime;
-      blogDetailContent.innerText = selectedBlog.content || '';
+      blogDetailContent.innerHTML = renderedContent;
       blogDetailImage.setAttribute('src', selectedBlog.imageUrl);
     }
 
