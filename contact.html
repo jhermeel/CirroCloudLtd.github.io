@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CirroCloud Solutions</title>
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&display=swap"
+    />
+
     <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="./fontawesome-free-6.3.0-web/css/all.min.css"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
-
+    <link rel="stylesheet" href="jamie/jamie.css" />
+    <!-- jamie external css link  add to every page for the footer and navigation-->
   </head>
   <body>
     <!-- container -->
@@ -83,12 +88,12 @@
             </div>
           </li>
           <li class="dropdown">
-            <a href="products.html" class="dropbtn" >Products</a>
+            <a href="products.html" class="dropbtn">Products</a>
             <div class="dropdown-content">
               <a href="office.html">Microsoft Office 365</a>
               <a href="nav.html">Dynamic 365/Nav</a>
               <a href="efris.html">Efris Intergrations</a>
-                <a href="azure.html">Microsoft Azure</a>
+              <a href="azure.html">Microsoft Azure</a>
               <a href="power.html">Power Platform</a>
               <!-- <a href="adoption.html">Products</a> -->
             </div>
@@ -96,7 +101,7 @@
           <li>
             <a href="blog">blog</a>
           </li>
-          <li >
+          <li>
             <a href="contact" class="active">Contact Us</a>
           </li>
         </ul>
@@ -161,148 +166,509 @@
       </div>
     </aside>
     <!-- end of sidebar -->
-    <hr>
-    <!-- connect -->
-    
-    <!-- end of connect -->
+    <hr />
 
-
-
-    <!-- .................nonsense starts ......................  ......--> 
-
-    <header class="contact-bg">
-      <div class="hero-banner">
-        <div class="ro">
-          <div class="cm" style="padding-left: 10px; padding-top:100px;text-align: left;">
-            <p><a href="https://www.web.whatsapp.com" class="social-icon" style="color: #0066ff">
-              <i class="fa-solid fa-phone"></i><span style="padding-left: 5px; color:white"> +256708001001 </span></a></p><br>
-            <p><a href="https://www.web.whatsapp.com" class="social-icon" style="color: #0066ff;">
-              <i class="fa-brands fa-whatsapp"></i><span style="padding-left: 5px; color:white">  +256778026599 </span></a> </p><br>
-            <p><a href="mailto:info@cirrocloudug.com" class="social-icon" style="color: #0066ff">
-              <i class="fa-solid fa-envelope"></i><span style="padding-left: 5px; color:white"> info@cirrocloudug.com </span></a></p><br>
-            <p><a href="#" class="social-icon" style="color: #0066ff">
-              <i class="fa-solid fa-location-dot"></i><span style="padding-left: 5px; color:white"> Bukoto St, 29</span></a></p><br>
-            <p><a href="#" class="social-icon" style="color: #0066ff">
-              <i class="fa-solid fa-fax"></i><span style="padding-left: 5px; color:white"> P. O. Box 116316, Kampala, Uganda</span></p>
-          </div>
-          <div class="cm">
-            <form id="contact-form" method="post" action="#">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-          
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-          
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required>
-          
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-          
-              <input type="submit" value="Submit">
-            </form>
-          
-            <div class="alert" id="alert">
-              Thank you for your message! We'll be in touch soon.
+    <section class="tacts-centered">
+      <h1 class="title">Get in touch</h1>
+      <div class="two-column-container">
+        <div class="column-one">
+          <form action="">
+            <div class="header-text">
+              <h4>Send us a message</h4>
+              <p>
+                Reach out to our team with any inquiries, feedback, or concerns
+                you may have. Whether you're looking for information about our
+                products and services, need assistance with an existing order,
+                or simply want to share your thoughts, we're here to listen and
+                help
+              </p>
             </div>
-          
+            <div class="form-row">
+              <label for="name" class="form-label">name</label
+              ><input
+                type="text"
+                name="name"
+                class="form-input"
+                id="name"
+                value=""
+              />
+            </div>
+            <div class="form-row">
+              <label for="name" class="form-label">email</label
+              ><input
+                type="email"
+                name="email"
+                id="email"
+                class="form-input"
+                value=""
+              />
+            </div>
+            <div class="form-row">
+              <label for="message" class="form-label">message</label
+              ><textarea
+                type="text"
+                name="message"
+                id="message"
+                class="form-input"
+                value=""
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Send Message</button>
+          </form>
+        </div>
+
+        <div class="vertical-divider"></div>
+
+        <div class="column-two">
+          <div class="contact-item">
+            <h4>Call Us</h4>
+            <p>
+              At CirroCloud Ltd, we understand that every inquiry is unique, and
+              we're always happy to help
+            </p>
+            <i class="fa-solid fa-phone-volume"></i>
+            <span class="caption-text"> (+256) 708 022 002</span>
+          </div>
+          <div class="contact-item">
+            <h4>Visit Us</h4>
+            <p>
+              We warmly welcome you to visit our office at CirroCloud Ltd to
+              experience our vibrant and collaborative environment.
+            </p>
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span class="caption-text"> Bukoto street, Kamwokya</span>
+          </div>
+          <div class="contact-item">
+            <h4>Live Chat</h4>
+            <p>
+              Get instant answers to your questions, discuss your needs, or seek
+              guidance on our services
+            </p>
+            <i class="fa-solid fa-headset"></i>
+            <span class="caption-text"> Start chat</span>
           </div>
         </div>
       </div>
-   
-  <!-- ......................nonsense ends  ............................-->
+      <div class="map-container">
+        <div class="map-holder" id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug"
+            width="100%"
+            height="300px"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="tacts-centered">
+      <div class="two-column-container faq">
+        <div class="column-one">
+          <div><span>FAQ</span></div>
+          <h5 class="title">Frequently asked questions</h5>
+        </div>
+        <div class="column-two">
+          <article class="question" id="question1">
+            <header>
+              <h5>What is Office 365, and what are cloud services?</h5>
+              <button class="question-btn" id="button1">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              Office 365 is a suite of cloud-based productivity tools by
+              Microsoft, including Word, Excel, PowerPoint, Outlook, and more.
+              Cloud services are a range of IT resources provided over the
+              internet, such as software, storage, and processing power, that
+              allow businesses to access and manage their data and applications
+              remotely.
+            </p>
+          </article>
+          <article class="question" id="question2">
+            <header>
+              <h5>
+                Why should my company choose Office 365 and cloud services?
+              </h5>
+              <button class="question-btn" id="button2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              By adopting Office 365 and cloud services, your company can
+              benefit from increased collaboration, flexibility, scalability,
+              and security. Cloud-based services enable your employees to work
+              from anywhere with an internet connection and access the latest
+              software updates without needing to install or maintain them.
+            </p>
+          </article>
+          <article class="question" id="question3">
+            <header>
+              <h5>How do I enroll my company in Office 365?</h5>
+              <button class="question-btn" id="button3">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              Enrolling your company in Office 365 involves creating an account,
+              choosing a subscription plan, and setting up your employees with
+              user accounts. Our team can guide you through the process and
+              provide support to ensure a smooth transition.
+            </p>
+          </article>
+          <article class="question" id="question4">
+            <header>
+              <h5>
+                Can I migrate my existing data and applications to the cloud?
+              </h5>
+              <button class="question-btn" id="button4">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              Yes, our team can help you migrate your existing data and
+              applications to the cloud while minimizing downtime and ensuring
+              data integrity during the process.
+            </p>
+          </article>
+          <article class="question" id="question5">
+            <header>
+              <h5>
+                What kind of support can I expect during the transition and
+                after enrolling in Office 365?
+              </h5>
+              <button class="question-btn" id="button5">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              We provide comprehensive support throughout the entire process,
+              from initial consultation and migration to ongoing technical
+              assistance and training for your employees. Our goal is to ensure
+              your business gets the most out of Office 365 and cloud services.
+            </p>
+          </article>
+          <article class="question" id="question6">
+            <header>
+              <h5>
+                How does Office 365 and cloud services ensure data security and
+                privacy?
+              </h5>
+              <button class="question-btn" id="button6">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              Office 365 and cloud services providers implement advanced
+              security measures such as data encryption, multi-factor
+              authentication, and regular security updates. Additionally,
+              Microsoft complies with various industry standards and regulations
+              to ensure data privacy and protection.
+            </p>
+          </article>
+          <article class="question" id="question7">
+            <header>
+              <h5>
+                Are there different Office 365 plans available for businesses of
+                different sizes?
+              </h5>
+              <button class="question-btn" id="button7">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              Yes, Office 365 offers various subscription plans to suit
+              businesses of different sizes, from small businesses to large
+              enterprises. Our team can help you select the plan that best fits
+              your company's needs and budget.
+            </p>
+          </article>
+          <article class="question" id="question8">
+            <header>
+              <h5>
+                How do I train my employees to use Office 365 effectively?
+              </h5>
+              <button class="question-btn" id="button8">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  t="1551322312294"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs></defs>
+                  <path
+                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                  ></path>
+                  <path
+                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                  ></path>
+                </svg>
+              </button>
+            </header>
+            <p>
+              We offer comprehensive training and resources to help your
+              employees quickly get up to speed with Office 365 tools and
+              features, enabling them to maximize productivity and
+              collaboration.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-
-   
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- <!-- footer  starts-->
-
- <footer class="footer" style="background-image: url(images/fbg.png)">
-  <div class="footer-col">  
-      <h3>Contact Us</h3>
-       <ul>
-      <li><a href="#"> Facebook</a></li>
-      <li><a href="#"> Twitter</a></li>
-      <li><a href="#"> Linkedin</a></li>
-      <li><a href="#"> +256708 002 002</a></li>
-    </ul><br>
-    <ul>
-      <li><a href="index.html"><img src="./images/logo_no_slogan.svg" alt="Image" class="img-fluid"></a></li>
-       <li><a href="#">Enhance Effeciency to drive business value</a></li>
-   </ul>
-  </div>
-  <div class="footer-col">
-    <h3>Our Pages</h3>
-    <ul>
+    <footer class="footer" style="background-image: url(images/fbg.png)">
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="#"> Facebook</a></li>
+          <li><a href="#"> Twitter</a></li>
+          <li><a href="#"> Linkedin</a></li>
+          <li><a href="#"> +256708 002 002</a></li>
+        </ul>
+        <br />
+        <ul>
+          <li>
+            <a href="index.html"
+              ><img
+                src="./images/logo_no_slogan.svg"
+                alt="Image"
+                class="img-fluid"
+            /></a>
+          </li>
+          <li><a href="#">Enhance Effeciency to drive business value</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Pages</h3>
+        <ul>
           <li><a href="index.html"> Home</a></li>
           <li><a href="about.html"> About Us</a></li>
           <li><a href="services.html"> Services</a></li>
           <li><a href="blog.html"> Blog</a></li>
           <li><a href="products.html"> Products</a></li>
           <li><a href="contact.html"> Contact Us</a></li>
-          <li><a href="contact.html"> Careers</a></li><br><br>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h3>Our Services</h3>
-    <ul>
-      <li><a href="#"> Modern Workplace</a></li>
-      <li><a href="#"> Adoption and Change Management</a></li>
-      <li><a href="#"> Business Applications</a></li>
-      <li><a href="#">Training</a></li>
-      <li><a href="#"> Application integration with Efris</a></li>
-      <li><a href="#">Support and Maintenance</a></li><br><br><br><br>
-    </ul>
-    </div>
-    <div class="footer-col">
-    <h3>Industries </h3>
-    <ul>
-       <li><a href="about.html"> Healthcare</a></li>
-      <li><a href="#"> Agriculture </a></li>
-      <li><a href="#"> Education </a></li>
-      <li><a href="#"> Financial Services </a></li>
-      <li><a href="#"> Government </a></li>
-      <li><a href="#"> Manufacturing & Resources </a></li>
-      <li><a href="#"> Power & Utilities </a></li>
-      <li><a href="#"> Professional Services </a></li>
-    </ul><br>
-  </div>
-  </div>
-  
-  <div class="footer-col">
-    <h3>Our Products </h3>
-    <ul>
+          <li><a href="contact.html"> Careers</a></li>
+          <br /><br />
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#"> Modern Workplace</a></li>
+          <li><a href="#"> Adoption and Change Management</a></li>
+          <li><a href="#"> Business Applications</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#"> Application integration with Efris</a></li>
+          <li><a href="#">Support and Maintenance</a></li>
+          <br /><br /><br /><br />
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Industries</h3>
+        <ul>
+          <li><a href="about.html"> Healthcare</a></li>
+          <li><a href="#"> Agriculture </a></li>
+          <li><a href="#"> Education </a></li>
+          <li><a href="#"> Financial Services </a></li>
+          <li><a href="#"> Government </a></li>
+          <li><a href="#"> Manufacturing & Resources </a></li>
+          <li><a href="#"> Power & Utilities </a></li>
+          <li><a href="#"> Professional Services </a></li>
+        </ul>
+        <br />
+      </div>
+
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul>
           <li><a href="#"> Office 365</a></li>
           <li><a href="#"> Dynamic Nav</a></li>
           <li><a href="#"> Efris Intergrations</a></li>
           <li><a href="#"> Microsoft Azure</a></li>
-    </ul><br>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug" width="220" height="110" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
-  </div>
-  
-</footer>
-<li style=" background-color:black ; text-align: center; color: blue; font-size: 0.8rem;
-;padding-bottom: 10px;padding-top: 10px;"><a href="#"> Copyright ©2023 All rights reserved | CirroCloud Solutions </a></li>
-<script src="./js/app.js"></script>
+        </ul>
+        <br />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug"
+          width="220"
+          height="110"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe
+        ><br /><br />
+      </div>
+    </footer>
+    <li
+      style="
+        background-color: black;
+        text-align: center;
+        color: blue;
+        font-size: 0.8rem;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      "
+    >
+      <a href="#">
+        Copyright ©2023 All rights reserved | CirroCloud Solutions
+      </a>
+    </li>
+    <script src="./js/blog.js"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());  gtag('config', 'G-5K9EZMW5T3');
-</script>
+    <script>
+      function initMap() {
+        var location = { lat: -34.397, lng: 150.644 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: location,
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+    </script>
+    <script>
+      const form = document.getElementById('contact-form');
+      const alert = document.getElementById('alert');
 
-<script>
-		const form = document.getElementById('contact-form');
-		const alert = document.getElementById('alert');
-
-		form.addEventListener('submit', (event) => {
-			event.preventDefault();
-			alert.style.display = 'block';
-			form.reset();
-		});
-	</script>
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert.style.display = 'block';
+        form.reset();
+      });
+    </script>
   </body>
 </html>
