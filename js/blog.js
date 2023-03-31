@@ -297,6 +297,7 @@ const blogApp = {
         });
     }
   },
+
   formatDateToString: function (dateString) {
     const date = new Date(dateString);
     const monthNames = [
@@ -334,6 +335,7 @@ const blogApp = {
 
     return `${monthNames[monthIndex]}, ${day}${ordinal(day)} ${year}`;
   },
+
   formatStringToDate: function (formattedString) {
     const regex = /^(\w+),\s+(\d+)(?:\w+)\s+(\d+)$/i;
     const matches = regex.exec(formattedString);
@@ -364,6 +366,43 @@ const blogApp = {
     const date = new Date(year, month, day);
     return date.toISOString();
   },
+
+  FaqClickEvents: function () {
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // Get all the question articles and buttons
+      const questions = document.querySelectorAll('.question');
+      const buttons = document.querySelectorAll('.question-btn');
+
+      // Hide all paragraphs except the first one, and hide the button for the first question
+      questions.forEach((question, index) => {
+        const paragraph = question.querySelector('p');
+        if (index === 0) {
+          question.querySelector('.question-btn').classList.add('hide-btn');
+        } else {
+          paragraph.classList.add('hidden');
+        }
+      });
+
+      // Add click event listeners for each button
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          questions.forEach((question, innerIndex) => {
+            const paragraph = question.querySelector('p');
+            if (index === innerIndex) {
+              paragraph.classList.remove('hidden');
+              button.classList.add('hide-btn');
+            } else {
+              paragraph.classList.add('hidden');
+              question
+                .querySelector('.question-btn')
+                .classList.remove('hide-btn');
+            }
+          });
+        });
+      });
+    });
+  },
 };
 
 blogApp.initCreateBlogButton();
+blogApp.FaqClickEvents();
