@@ -49,12 +49,13 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
+  --clr-black: #000;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
   --ff-tertiary: 'Jost', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
-  --radius: 0.5rem;
+  --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -1105,19 +1106,6 @@ Top Nav added code starts , jamal
   }
 }
 
-/*
-===============   ===============
-To nav added code ends  , jamal
-===============   ===============
-*/
-
-/*===============     ===============.
-Products added  code  starts  Jamal
-===============     =============== */
-* {
-  box-sizing: border-box;
-}
-
 /* Float four columns side by side */
 .col {
   float: left;
@@ -1539,14 +1527,6 @@ Blogs Page
   font-size: 0.85rem;
 }
 
-.search-input {
-  padding: 0.5rem;
-  background: var(--clr-grey-9);
-  border-radius: var(--borderRadius);
-  border-color: transparent;
-  letter-spacing: var(--letterSpacing);
-}
-
 .company-btn {
   display: block;
   margin: 0.25em 0;
@@ -1642,7 +1622,6 @@ Blogs Page
   .filters-container {
     position: sticky;
     top: 1rem;
-    display: none;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1662,11 +1641,6 @@ Blogs Page
   }
   .menu-item {
     max-width: 100%;
-  }
-}
-@media screen and (min-width: 1170px) {
-  .blogs-container {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1689,40 +1663,6 @@ Blogs Page
   color: var(--clr-grey-5);
   line-height: 1.8;
 }
-
-/*just contact form*/
-input[type='text'],
-select,
-textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type='submit'] {
-  background-color: #387fcf;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: left;
-}
-.lebo {
-  text-align: left;
-}
-/* When moving the mouse over the submit button, add a darker green color */
-input[type='submit']:hover {
-  background-color: #99af4a;
-}
-
-/* Add a background color and some padding around the form */
 
 .container {
   border-radius: 5px;
@@ -1760,96 +1700,6 @@ input[type='submit']:hover {
   opacity: 0.7;
 }
 
-/* .........................contact section with two columns.................................... */
-
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.cm {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 700px; /* Should be removed. Only for demonstration */
-  color: white;
-}
-
-/* Clear floats after the columns */
-.ro:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-/*
-/* .........................contact section with two columns ends.................................... */
-*/
-
-/* ......................contact form................... */
-
-h1 {
-  text-align: left;
-  color: #333;
-  margin-top: 50px;
-}
-
-form {
-  text-align: left;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-input[type='text'],
-input[type='email'],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #f5f5f5;
-  color: #333;
-  font-size: 16px;
-  margin-bottom: 20px;
-  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-input[type='submit'] {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-input[type='submit']:hover {
-  background-color: #555;
-}
-
-.alert {
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  margin-top: 20px;
-  border-radius: 5px;
-  display: none;
-}
-
-/* .......................contact form ends ................... */
-
 #read-more {
   display: block;
   text-transform: uppercase;
@@ -1878,4 +1728,143 @@ input[type='submit']:hover {
 .menu-item footer .date .icon {
   color: var(--primary-500);
   margin-right: 0.5rem;
+}
+
+.blog-section {
+  min-height: calc(80vh - 10rem);
+}
+.blog-centered {
+  display: grid;
+  gap: 3rem 1.5rem;
+  margin: 4rem auto;
+  width: 95vw;
+  max-width: var(--max-width);
+  grid-template-columns: 200px 1fr;
+}
+
+.blog-centered .content {
+  position: sticky;
+  top: 8rem;
+}
+
+.blog-centered .content .form-control {
+  margin-bottom: 1.25rem;
+}
+
+.blog-centered .content .search-input {
+  padding: 0.5rem;
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+  border-color: transparent;
+  letter-spacing: var(--spacing);
+  width: 100%;
+  font-family: var(--ff-tertiary);
+}
+.blog-centered .content button {
+  display: block;
+  margin: 0.25em 0px;
+  padding: 0.25rem 0px;
+  text-transform: capitalize;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-image: initial;
+  border-bottom: 1px solid transparent;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-5);
+  cursor: pointer;
+  font-family: var(--ff-tertiary);
+}
+
+.blog-centered .content .form-control h5 {
+  margin-bottom: 0.5rem;
+}
+.blog-centered .content .active {
+  border-color: var(--clr-grey-5);
+  opacity: 1;
+}
+.blog-centered .content .clear-btn {
+  background: var(--primary-500);
+  color: var(--clr-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+}
+.blog-list-section {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  column-gap: 2rem;
+}
+.blog-list-section .btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
+}
+.blog-list-section .btn-container .active {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+.blog-list-section .btn-container button {
+  background: transparent;
+  border: 1px solid var(--clr-black);
+  color: var(--clr-black);
+  width: 1.5rem;
+  border-radius: var(--radius);
+  height: 1.5rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.blog-list-section p {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+}
+.blog-list-section hr {
+  border: none;
+  border-top: 1px solid #bcccdc;
+  border-top: 1px solid var(--clr-grey-8);
+}
+.blog-list-section .sort-input {
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+}
+
+/* Add .blogs-container before each .single-column rule */
+.blogs-container.single-column {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-columns: auto;
+}
+
+.blogs-container.single-column .menu-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.blogs-container.single-column .menu-item img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.blogs-container.single-column .menu-item img h4 {
+  margin-bottom: 0.5rem;
+}
+
+button svg {
+  pointer-events: none;
 }
