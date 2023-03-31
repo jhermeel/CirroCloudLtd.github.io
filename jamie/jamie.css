@@ -252,6 +252,47 @@
 /* /6 */
 /*................................slider code ends  ..............................*/
 
+/* .......................Jamie demo section starts ................. */
+ form {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  font-family: Lucida Sans Unicode;
+}
+
+  /*body {
+    background-image: url('dark-background.jpg');
+    background-size: cover;
+  }*/
+
+label, select, input, button {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+select, input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #ccc;
+    padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+
+/* .......................Jamie demo section starts................ */
+
 
 /* ..................................product cards css   ............................*/
 
