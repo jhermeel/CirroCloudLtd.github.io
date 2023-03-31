@@ -369,11 +369,9 @@ const blogApp = {
 
   FaqClickEvents: function () {
     window.addEventListener('DOMContentLoaded', (event) => {
-      // Get all the question articles and buttons
       const questions = document.querySelectorAll('.question');
       const buttons = document.querySelectorAll('.question-btn');
 
-      // Hide all paragraphs except the first one, and hide the button for the first question
       questions.forEach((question, index) => {
         const paragraph = question.querySelector('p');
         if (index === 0) {
@@ -382,8 +380,6 @@ const blogApp = {
           paragraph.classList.add('hidden');
         }
       });
-
-      // Add click event listeners for each button
       buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
           questions.forEach((question, innerIndex) => {
@@ -402,7 +398,31 @@ const blogApp = {
       });
     });
   },
+
+  addClickEventListenersToColumnButtons: function () {
+    const buttons = document.querySelectorAll('.btn-container button');
+    // Add click event listeners to the buttons
+    buttons.forEach((button) =>
+      button.addEventListener('click', this.handleColumnButtonsClickEvents)
+    );
+  },
+
+  handleColumnButtonsClickEvents: function (event) {
+    const buttons = document.querySelectorAll('.btn-container button');
+    const blogsContainer = document.getElementById('blogs-container');
+
+    buttons.forEach((button) => button.classList.remove('active'));
+
+    event.target.classList.add('active');
+
+    if (event.target.classList.contains('null')) {
+      blogsContainer.classList.add('single-column');
+    } else {
+      blogsContainer.classList.remove('single-column');
+    }
+  },
 };
 
 blogApp.initCreateBlogButton();
 blogApp.FaqClickEvents();
+blogApp.addClickEventListenersToColumnButtons();

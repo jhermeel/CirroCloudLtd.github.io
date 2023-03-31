@@ -18,7 +18,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/blog.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="jamie/jamie.css" />
+    <link rel="stylesheet" href="css/blog-jamie.css" />
     <!-- jamie external css link  add to every page for the footer and navigation-->
   </head>
   <body>
@@ -93,7 +93,7 @@
               <a href="office.html">Microsoft Office 365</a>
               <a href="nav.html">Dynamic 365/Nav</a>
               <a href="efris.html">Efris Intergrations</a>
-                <a href="azure.html">Microsoft Azure</a>
+              <a href="azure.html">Microsoft Azure</a>
               <a href="power.html">Power Platform</a>
               <!-- <a href="adoption.html">Products</a> -->
             </div>
@@ -166,37 +166,95 @@
       </div>
     </aside>
     <!-- end of sidebar -->
+
     <!-- blog -->
-    <section class="section blog">
-      <div class="blogs">
-        <div class="filters">
-          <div class="filters-container">
-            <!-- search -->
-            <form class="input-form">
-              <input type="text" class="search-input" placeholder="search..." />
+    <section class="blog-section">
+      <div class="blog-centered">
+        <section>
+          <div class="content">
+            <form>
+              <div class="form-control">
+                <input
+                  type="text"
+                  name="text"
+                  placeholder="search"
+                  class="search-input"
+                  value=""
+                />
+              </div>
+              <div class="form-control">
+                <h5>Read Time</h5>
+                <div>
+                  <button type="button" name="category" class="active">
+                    all</button
+                  ><button type="button" name="category" class="null">
+                    3 minutes</button
+                  ><button type="button" name="category" class="null">
+                    5 minutes</button
+                  ><button type="button" name="category" class="null">
+                    10 minutes</button
+                  ><button type="button" name="category" class="null">
+                    15 minutes</button
+                  ><button type="button" name="category" class="null">
+                    20 minutes</button
+                  ><button type="button" name="category" class="null">
+                    25 minutes
+                  </button>
+                </div>
+              </div>
             </form>
-            <!-- categories -->
-            <h5>Company</h5>
-            <article class="companies">
-              <button class="company-btn">all</button>
-              <button class="company-btn">ikea</button>
-              <button class="company-btn">marcos</button>
-            </article>
-            <!-- price -->
-            <h5>Price</h5>
-            <form class="price-form">
-              <input
-                type="range"
-                class="price-filter"
-                min="0"
-                value="50"
-                max="100"
-              />
-            </form>
-            <span class="price-value">Value : $80</span>
+            <button type="button" class="clear-btn">clear filters</button>
           </div>
+        </section>
+        <div>
+          <section class="blog-list-section">
+            <div class="btn-container">
+              <button class="active">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"
+                  ></path>
+                </svg>
+              </button>
+              <button class="null">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <p></p>
+            <hr />
+            <form>
+              <label for="sort">sort by</label
+              ><select name="sort" id="sort" class="sort-input">
+                <option value="price-lowest">Created (newest)</option>
+                <option value="price-highest">Created (oldest)</option>
+              </select>
+            </form>
+          </section>
+          <section>
+            <ul class="blog-list blogs-container" id="blogs-container"></ul>
+          </section>
         </div>
-        <ul class="blog-list blogs-container"></ul>
       </div>
     </section>
     <!--end of  blog -->
