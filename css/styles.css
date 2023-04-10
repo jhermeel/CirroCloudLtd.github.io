@@ -198,9 +198,14 @@ p {
 .section {
   padding: 0rem 0;
 }
+.demoreq{
+  
+    padding: 0rem 0;
+  
+}
 
 .greybg {
-  background-color: #eff3f8;
+  background-color: #D0ADA7;
   margin-bottom: 0px;
 }
 .section-about {
@@ -211,14 +216,32 @@ p {
   /* margin: 0px; */
   /* max-width: 100%; */
   /* overflow-x: hidden; */
-  background: #eff3f8;
+  background: #84d4e2;
+}
+.section-demo{
+  text-align: left;
+  font-size: 2rem;
+
+  /* margin-left: 20px; */
+  /* margin: 0px; */
+  /* max-width: 100%; */
+  /* overflow-x: hidden; */
+  background: #8eb6e7;
 }
 .section-center {
   /* width: 100vw; */
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background: #eff3f8;
+  background: #D0ADA7;
+  
+}
+.section-demo {
+  /* width: 100vw; */
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #D6F7A3;
 }
 .adoption-center {
   /* width: 100vw; */
@@ -251,6 +274,17 @@ p {
   margin-right: auto;
 }
 
+.section-service {
+  margin-bottom: 4rem;
+  text-align: center;
+  padding-top: 10;
+  /* background-image:url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733722/Cirrocloud%20web/random%20images/project-4_tkymai.jpg') ; */
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
@@ -266,7 +300,13 @@ p {
   margin-right: 400px;
   margin-top: 20px;
 }
-
+.bg-business {
+  background: rgb(176, 221, 176);
+  border-radius: 1%;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+}
 /*
 /*
 =============== 
@@ -478,11 +518,27 @@ Hero
   justify-content: center;
   align-items: center;
 }
+
+
 .hero-banner {
   text-align: center;
   color: var(--primary-100);
   padding: 0 2rem;
 }
+.section-services{
+  text-align: center;
+  color: var(--primary-100);
+  padding: 0 4rem;
+  min-height: 100vh;
+  min-height: calc(100vh - 62px);
+  background: var(--primaryColor);
+  display: block;
+  padding-top: 15%;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
 .hero-title {
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -500,7 +556,12 @@ Hero
 @media screen and (min-width: 768px) {
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-      url('../images/big_office_img.jpeg') center/cover no-repeat;
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733716/Cirrocloud%20web/random%20images/big_office_img_fqve67.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+  }
+  .section-services {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733715/Cirrocloud%20web/random%20images/big_about_v3_t5d9zz.webp') center/cover no-repeat;
     background-attachment: fixed;
   }
   .contact-bg {
@@ -584,11 +645,18 @@ About
   display: grid;
   gap: 3rem 2rem;
 }
+.about-demo {
+  display: grid;
+  gap: 3rem 2rem;
+}
 .about-img {
   justify-self: center;
 }
 @media screen and (min-width: 992px) {
   .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-demo {
     grid-template-columns: 1fr 1fr;
   }
   .about-img {
@@ -1871,4 +1939,88 @@ input[type='submit']:hover {
 .menu-item footer .date .icon {
   color: var(--primary-500);
   margin-right: 0.5rem;
+}
+
+
+         /* form css starts */
+.section-form{
+  background-color: #c0b622;
+
+  margin: bottom 100px;
+
+}
+.demo {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: var(--clr-primary-3); */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+/* Styles for the dropdown arrow */
+form select {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('path/to/dropdown-arrow.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 20px; /* Make room for the arrow */
+}
+
+/* Styles for the dropdown options */
+select option {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Styles for the selected option */
+select option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+form input[type="name"],
+form input[type="email"],
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0062cc;
 }
