@@ -205,7 +205,7 @@ p {
 }
 
 .greybg {
-  background-color: #D0ADA7;
+  background-color: #eff3f8;
   margin-bottom: 0px;
 }
 .section-about {
@@ -216,7 +216,7 @@ p {
   /* margin: 0px; */
   /* max-width: 100%; */
   /* overflow-x: hidden; */
-  background: #84d4e2;
+  background: #eff3f8;
 }
 .section-demo{
   text-align: left;
@@ -233,8 +233,7 @@ p {
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background: #D0ADA7;
-  
+  background: #eff3f8;
 }
 .section-demo {
   /* width: 100vw; */
