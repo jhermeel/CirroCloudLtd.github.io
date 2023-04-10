@@ -253,16 +253,12 @@
 /*................................slider code ends  ..............................*/
 
 /* .......................Jamie demo section starts ................. */
- form {
+/* form {
   background-color: yellowgreen;
   padding: 20px;
   font-family: Lucida Sans Unicode;
 }
 
-  /*body {
-    background-image: url('dark-background.jpg');
-    background-size: cover;
-  }*/
 
 label, select, input, button {
   font-size: 18px;
@@ -289,7 +285,7 @@ button {
 button:hover {
   background-color: #3e8e41;
 }
-
+*/
 
 /* .......................Jamie demo section starts................ */
 
