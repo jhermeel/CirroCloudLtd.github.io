@@ -253,6 +253,13 @@
 /*................................slider code ends  ..............................*/
 
 /* .......................Jamie demo section starts ................. */
+
+.demo-text {
+  padding-top:120px;
+  text-align: justify;
+  margin-right: 30px;
+  font-size:18px;
+}
 /* form {
   background-color: yellowgreen;
   padding: 20px;
