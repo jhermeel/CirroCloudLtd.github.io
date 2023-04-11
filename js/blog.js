@@ -421,8 +421,31 @@ const blogApp = {
       blogsContainer.classList.remove('single-column');
     }
   },
+  addHoverEventsForNavDropDownLists: function (event) {
+    const navLinkDropdown = document.querySelector(
+      '.nav-link-dropdown[navbar-data]'
+    );
+    const dropdownList = document.querySelector(
+      '.nav-link-dropdown-list[navbar-data]'
+    );
+
+    function showDropdown() {
+      dropdownList.style.display = 'block';
+    }
+
+    function hideDropdown() {
+      dropdownList.style.display = 'none';
+    }
+
+    navLinkDropdown.addEventListener('mouseover', showDropdown);
+    dropdownList.addEventListener('mouseover', showDropdown);
+
+    navLinkDropdown.addEventListener('mouseout', hideDropdown);
+    dropdownList.addEventListener('mouseout', hideDropdown);
+  },
 };
 
 blogApp.initCreateBlogButton();
 blogApp.FaqClickEvents();
 blogApp.addClickEventListenersToColumnButtons();
+blogApp.addHoverEventsForNavDropDownLists();
