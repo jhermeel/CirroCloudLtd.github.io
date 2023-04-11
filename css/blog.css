@@ -437,6 +437,16 @@ Navbar
   .nav-link-dropdown:hover .nav-link-dropdown-list {
     display: block !important;
   }
+
+  .arrow-icon {
+    transition: transform 0.3s;
+  }
+
+  .nav-link-dropdown:hover .arrow-icon,
+  .nav-link-dropdown-list:hover ~ .arrow-icon {
+    transform: rotate(180deg);
+  }
+
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr;
