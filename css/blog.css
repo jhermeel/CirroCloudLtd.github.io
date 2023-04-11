@@ -384,7 +384,7 @@ Navbar
   }
 
   .dropdown-link-item[navbar-data]:hover {
-    background-color: var(--primary-500);
+    background-color: var(--primary-100);
   }
 
   .nav-link-dropdown[navbar-data] {
@@ -411,6 +411,9 @@ Navbar
     background: #fff;
     transition: 0.3s;
     z-index: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    max-width: 200px;
   }
   .nav-link-dropdown-list ul[navbar-data] {
     list-style-type: none;
