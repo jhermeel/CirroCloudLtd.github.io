@@ -1846,6 +1846,7 @@ contact us page
 .tacts-centered {
   max-width: 60%;
   margin: 0 auto;
+  margin-top: 2rem;
 }
 .tacts-centered .title {
   font-family: var(--ff-tertiary);
@@ -1989,6 +1990,7 @@ contact us page
     font-size: 48px;
   }
 }
+
 .vertical-divider {
   border-left: 1px solid #000;
   height: 100%;
@@ -2005,10 +2007,11 @@ contact us page
   padding: 30px 0;
 }
 .column-one .title {
-  max-width: 5rem;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 800;
+  margin-top: 1rem;
 }
+
 .column-one div span {
   font-size: 1.5rem;
 }
@@ -2018,10 +2021,12 @@ contact us page
 }
 
 .faq {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
+
 .question {
-  padding: 1rem 1.5rem;
+  padding: 0.25rem 1.5rem;
+  padding-left: 0;
   border: 2px solid var(--grey-200);
   margin-bottom: 1rem;
   border-radius: var(--borderRadius);
@@ -2067,4 +2072,23 @@ contact us page
 
 .hide-btn {
   visibility: hidden;
+}
+
+@media screen and (min-width: 1058px) {
+  .faq {
+    grid-template-columns: 1fr 1fr;
+  }
+  .column-one .title {
+    max-width: 5rem;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  .question {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--grey-200);
+    margin-bottom: 1rem;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow-3);
+    margin-bottom: 2rem;
+  }
 }
