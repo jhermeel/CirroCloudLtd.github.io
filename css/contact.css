@@ -2002,7 +2002,7 @@ contact us page
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
   backface-visibility: hidden;
-  margin: 5rem;
+  padding: 30px 0;
 }
 .column-one .title {
   max-width: 5rem;
