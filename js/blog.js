@@ -422,11 +422,9 @@ const blogApp = {
     }
   },
   addHoverEventsForNavDropDownLists: function (event) {
-    const navLinkDropdown = document.querySelector(
-      '.nav-link-dropdown[navbar-data]'
-    );
+    const navLinkDropdown = document.querySelector('.nav-link[navbar-data]');
     const dropdownList = document.querySelector(
-      '.nav-link-dropdown-list[navbar-data]'
+      ':scope > .nav-link-dropdown-list[navbar-data]'
     );
 
     function showDropdown() {

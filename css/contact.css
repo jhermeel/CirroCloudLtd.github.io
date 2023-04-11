@@ -877,6 +877,10 @@ contact us page
   grid-template-columns: 1fr;
 }
 
+.nav-link-dropdown-list[navbar-data] {
+  display: none;
+}
+
 @media screen and (min-width: 853px) {
   .nav {
     background: var(--clr-white);
@@ -946,6 +950,7 @@ contact us page
     overflow-y: auto;
     max-width: 200px;
   }
+
   .nav-link-dropdown-list ul[navbar-data] {
     list-style-type: none;
     padding-left: 0;
