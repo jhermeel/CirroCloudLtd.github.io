@@ -345,28 +345,100 @@ Navbar
   .nav-btn {
     display: none;
   }
-  .nav-links {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-    -webkit-column-gap: 2rem;
-    -moz-column-gap: 2rem;
-    column-gap: 2rem;
-    justify-self: end;
+  [navbar-data] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-tertiary);
   }
-  .nav-links a {
-    text-transform: capitalize;
-    color: var(--clr-grey-1);
-    font-weight: bold;
-    letter-spacing: var(--spacing);
-  }
-  .nav-links a.active {
-    color: var(--primary-500);
+  .nav-links[navbar-data] {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    justify-content: flex-end;
   }
 
-  .nav-links a:hover {
-    color: var(--primary-500);
+  .nav-link[navbar-data] {
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
   }
+
+  .dropdown-link-item[navbar-data] {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    transition: 0.5s;
+  }
+
+  .dropdown-link-item[navbar-data]:hover {
+    background-color: var(--primary-100);
+  }
+
+  .nav-link-dropdown[navbar-data] {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .nav-link-dropdown svg[navbar-data] {
+    margin-left: 10px;
+  }
+  .nav-link-dropdown-title[navbar-data] {
+    padding: 1rem 0;
+    display: inline-block;
+  }
+  .nav-link-dropdown-list[navbar-data] {
+    display: none;
+    position: absolute;
+    width: 165px;
+    margin-left: 0;
+    top: 100%;
+    padding: 5px 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    transition: 0.3s;
+    z-index: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    max-width: 200px;
+  }
+  .nav-link-dropdown-list ul[navbar-data] {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .nav-link-dropdown-list-link[navbar-data] {
+    margin: 10px 0;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .nav-link-dropdown-list-link[navbar-data] {
+    padding: 10px;
+    transition: 0.5s;
+  }
+  .nav-link-dropdown-list-link[navbar-data]:hover {
+    background-color: var(--primary-500);
+  }
+
+  .nav-link-dropdown:hover .nav-link-dropdown-list {
+    display: block !important;
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s;
+  }
+
+  .nav-link-dropdown:hover .arrow-icon,
+  .nav-link-dropdown-list:hover ~ .arrow-icon {
+    transform: rotate(180deg);
+  }
+
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr;
