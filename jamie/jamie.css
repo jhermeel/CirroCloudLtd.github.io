@@ -253,16 +253,19 @@
 /*................................slider code ends  ..............................*/
 
 /* .......................Jamie demo section starts ................. */
- form {
-  background-color: rgba(255, 255, 255, 0.2);
+
+.demo-text {
+  padding-top:120px;
+  text-align: justify;
+  margin-right: 30px;
+  font-size:18px;
+}
+/* form {
+  background-color: yellowgreen;
   padding: 20px;
   font-family: Lucida Sans Unicode;
 }
 
-  /*body {
-    background-image: url('dark-background.jpg');
-    background-size: cover;
-  }*/
 
 label, select, input, button {
   font-size: 18px;
@@ -289,7 +292,7 @@ button {
 button:hover {
   background-color: #3e8e41;
 }
-
+*/
 
 /* .......................Jamie demo section starts................ */
 
@@ -513,7 +516,7 @@ h2{
 
 /*............................footer  starts  Jamal.........................*/ 
 .footer {
-  background-image: url(images/fbg.png);
+  background-image: url(https://res.cloudinary.com/dn2dpvceq/image/upload/v1681043078/Cirrocloud%20web/fbg_mg3joi.png);
   padding-left: 40px;
   padding-top: 40px;
   margin-top: 40px;
