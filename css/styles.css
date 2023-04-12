@@ -216,7 +216,7 @@ p {
   /* margin: 0px; */
   /* max-width: 100%; */
   /* overflow-x: hidden; */
-  background: #eff3f8;
+  /* background: #eff3f8; */
 }
 /* .section-demo{
   text-align: left;
@@ -234,6 +234,21 @@ p {
   max-width: 100%;
   overflow-x: hidden;
   background: #fff;
+}
+
+.section-aboutus {
+  /* width: 100vw; */
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+}
+.section-aboutu {
+  /* width: 100vw; */
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #264027;
 }
 .section-demo {
   /* width: 100vw; */
@@ -261,7 +276,7 @@ p {
   width: 15rem;
   height: 0.3rem;
   margin-bottom: 1.25rem;
-  background: var(--primary-500);
+  background: rgb(17, 173, 139);
   /* margin-left: auto;
   margin-right: auto; */
 }
@@ -273,7 +288,14 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-
+.underliner {
+  width: 10rem;
+  height: 0.3rem;
+  margin-bottom: 1.25rem;
+  background: aqua;
+  margin-left: auto;
+  margin-right: auto;
+}
 .section-service {
   margin-bottom: 4rem;
   text-align: center;
@@ -290,20 +312,24 @@ p {
   text-align: center;
   padding-top: 10;
 }
+
 .section-business {
   /* margin-bottom: 4rem; */
   text-align: center;
   /* padding-top: 10; */
 }
 .bg-grey {
-  background: var(--clr-white);
+  background: #264027;
 }
 .bg-darkgrey {
   background: #efe;
-  border-radius: 10%;
+  padding-top:4% ;
+  padding-bottom: 3%;
+  /* border-radius: 10%;
   margin-left: 400px;
-  margin-right: 400px;
-  margin-top: 20px;
+  margin-right: 400px; */
+  
+  /* margin-top: 20px; */
 }
 .bg-business {
   background: rgb(176, 221, 176);
@@ -640,7 +666,7 @@ About
 */
 /* section title added to globals */
 .about-title {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 .about-title .underline {
@@ -697,7 +723,22 @@ Services
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
+.values {
+  background: #264027;
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #ccc;
+}
 .service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.values-icon {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -707,18 +748,56 @@ Services
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
+.values .underliner {
+  width: 3rem;
+  height: 0.12rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  /* background: var(--primary-500); */
+  /* color: var(--primary-500); */
+}
+/* .bg-grey::after {
+  content: '';
+  height: 4px;
+  margin: 10 auto;
+  text-align: center;
+  width: 15%;
+  background-color: aqua;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  border-radius: 5px;
+  transform: translate(-50%);
+  
+} */
+
 .service p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
+.values p {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #fff;
+}
 .service:hover {
+  background: var(--primary-500);
+  color: var(--clr-white);
+}
+.values:hover {
   background: var(--primary-500);
   color: var(--clr-white);
 }
 .service:hover p {
   color: var(--clr-white);
 }
-.service:hover .underline {
+.values:hover p {
+  color: var(--clr-white);
+}
+.service:hover .underliner {
+  background: var(--clr-white);
+}
+.values:hover .underliner {
   background: var(--clr-white);
 }
 @media screen and (min-width: 676px) {
@@ -997,7 +1076,7 @@ Timeline
   max-width: 40rem;
 }
 .timeline-item {
-  border-top: 2px dashed var(--primary-500);
+  border-top: 2px dashed aqua;
   margin: 0;
   padding: 4rem 2rem;
   position: relative;
@@ -1006,7 +1085,7 @@ Timeline
   margin-bottom: 0;
 }
 .timeline-item:nth-child(even) {
-  border-left: 2px dashed var(--primary-500);
+  border-left: 2px dashed aqua;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 
@@ -1014,7 +1093,7 @@ Timeline
   padding-right: 0;
 }
 .timeline-item:nth-child(odd) {
-  border-right: 2px dashed var(--primary-500);
+  border-right: 2px dashed aqua;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   margin-left: 2rem;
@@ -1033,13 +1112,13 @@ Timeline
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-bottom: 0;
-  background: var(--primary-500);
+  background: rgb(17, 173, 139);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: var(--primary-700);
+  color: white;
   font-weight: bold;
 }
 .timeline-item:nth-child(even) .number {
@@ -1415,6 +1494,7 @@ Products Page
 #our-Team {
   width: 80%;
   margin: 4rem auto 1rem;
+  padding-bottom: 6%;
 }
 
 #our-Team h2 {
