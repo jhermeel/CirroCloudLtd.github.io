@@ -218,7 +218,7 @@ p {
   /* overflow-x: hidden; */
   background: #eff3f8;
 }
-.section-demo{
+/* .section-demo{
   text-align: left;
   font-size: 2rem;
 
@@ -226,21 +226,22 @@ p {
   /* margin: 0px; */
   /* max-width: 100%; */
   /* overflow-x: hidden; */
-  background: #8eb6e7;
-}
+
+ 
 .section-center {
   /* width: 100vw; */
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background: #eff3f8;
+  background: #fff;
 }
 .section-demo {
   /* width: 100vw; */
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background: #D6F7A3;
+  background-color: #041858;
+  ;
 }
 .adoption-center {
   /* width: 100vw; */
@@ -289,6 +290,11 @@ p {
   text-align: center;
   padding-top: 10;
 }
+.section-business {
+  /* margin-bottom: 4rem; */
+  text-align: center;
+  /* padding-top: 10; */
+}
 .bg-grey {
   background: var(--clr-white);
 }
@@ -302,9 +308,9 @@ p {
 .bg-business {
   background: rgb(176, 221, 176);
   border-radius: 1%;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 20px;
+  /* margin-left: 200px; */
+  /* margin-right: 200px; */
+  /* margin-top: 20px; */
 }
 /*
 /*
@@ -1859,7 +1865,7 @@ form {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); */
   max-width: 500px;
 }
 
@@ -1943,24 +1949,29 @@ input[type='submit']:hover {
 
          /* form css starts */
 .section-form{
-  background-color: #c0b622;
+  background-color: #041858;
+  
 
   margin: bottom 100px;
 
 }
 .demo {
   max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+  /* margin: 0 auto; */
+  /* padding: 20px; */
+  background: none;
+  /* background-color: #041858; */
+  /* padding-top: 45px; */
   /* background-color: var(--clr-primary-3); */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* border-radius: 10px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
-.form-title {
-  font-size: 24px;
+.form-title{
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 form label {
@@ -2013,6 +2024,7 @@ form textarea {
 form button[type="submit"] {
   background-color: #007bff;
   color: #fff;
+  padding-top: 30px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
