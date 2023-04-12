@@ -248,7 +248,7 @@ p {
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background: #264027;
+  background:  rgb(17, 173, 139);;
 }
 .section-demo {
   /* width: 100vw; */
@@ -276,7 +276,7 @@ p {
   width: 15rem;
   height: 0.3rem;
   margin-bottom: 1.25rem;
-  background: rgb(17, 173, 139);
+  background: var(--primary-500);
   /* margin-left: auto;
   margin-right: auto; */
 }
@@ -292,7 +292,7 @@ p {
   width: 10rem;
   height: 0.3rem;
   margin-bottom: 1.25rem;
-  background: aqua;
+  background:var(--primary-500);
   margin-left: auto;
   margin-right: auto;
 }
@@ -319,7 +319,7 @@ p {
   /* padding-top: 10; */
 }
 .bg-grey {
-  background: #264027;
+  background: rgb(17, 173, 139);
 }
 .bg-darkgrey {
   background: #efe;
@@ -724,14 +724,14 @@ Services
   transition: var(--transition);
 }
 .values {
-  background: #264027;
+  background:rgb(17, 173, 139);
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  color: #ccc;
+  color: #fff;
 }
 .service-icon {
   font-size: 2rem;
@@ -1112,7 +1112,7 @@ Timeline
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-bottom: 0;
-  background: rgb(17, 173, 139);
+  background: var(--primary-500);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
