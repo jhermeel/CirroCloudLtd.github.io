@@ -198,42 +198,235 @@
 
 
 
-/* 5 */
-@media screen and (max-width: 800px){
-	.myslide{
-		height: 250px;
-	}
-	.txt{
-		letter-spacing: 2px;
-		line-height: 25px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		-webkit-animation-name: posi2;
-		-webkit-animation-duration: 2s;
-		animation-name: posi2;
-		animation-duration: 2s;
-	}
+/* slider media querries  */
+/*...................................new media querries................*/
 
-	@-webkit-keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
+/* Default styles for all screen sizes */
+
+/* .................Styles for screens 479px wide .............. */
+@media (max-width: 459px) {
+  .myslide{
+    height: 200px;
+  }
+  .txt{
+
+    display: none;
+  }
+
+  @-webkit-keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
 
 
-	@keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
+  @keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
 
-	.txt h1{
-		font-size: 40px;
-	}
-	.txt p{
-		font-size: 13px;
-	}
+  .txt h1{
+    font-size: 40px;
+  }
+  .txt p{
+    font-size: 13px;
+  }
 
 }
+
+
+@media (min-width: 459px) and (max-width: 479px) {
+  .myslide{
+    height: 300px;
+  }
+  .txt{
+
+    letter-spacing: 2px;
+    line-height: 20px;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: posi2;
+    -webkit-animation-duration: 2s;
+    animation-name: posi2;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+
+  @keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+  .txt h1{
+    font-size: 40px;
+  }
+  .txt p{
+    font-size: 13px;
+  }
+
+}
+
+
+
+
+/*............ small mobile landscape ..............*/
+@media (min-width: 480px) and (max-width: 769px) {
+   .myslide{
+    height: 350px;
+  }
+  .txt{
+
+    letter-spacing: 2px;
+    line-height: 20px;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: posi2;
+    -webkit-animation-duration: 2s;
+    animation-name: posi2;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+
+  @keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+  .txt h1{
+    font-size: 40px;
+  }
+  .txt p{
+    font-size: 13px;
+  }
+}
+
+/*............ tablet portrait ..............*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .myslide{
+    height: 400px;
+  }
+  .txt{
+
+    letter-spacing: 2px;
+    line-height: 25px;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: posi2;
+    -webkit-animation-duration: 2s;
+    animation-name: posi2;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+
+  @keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+  .txt h1{
+    font-size: 40px;
+  }
+  .txt p{
+    font-size: 13px;
+  }
+}
+
+/*............ tablet landscape n small pcs  ..............*/
+@media (min-width: 992px) and (max-width: 1199px) {
+   .myslide{
+    height: 450px;
+  }
+  .txt{
+
+    letter-spacing: 2px;
+    line-height: 30px;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: posi2;
+    -webkit-animation-duration: 2s;
+    animation-name: posi2;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+
+  @keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+  .txt h1{
+    font-size: 40px;
+  }
+  .txt p{
+    font-size: 13px;
+  }
+}
+
+
+/*......... Styles for wide desktops than 1200px and above .........*/
+@media (min-width: 900px) {
+   .myslide{
+    height: 520px;
+  }
+  .txt{
+
+    letter-spacing: 2px;
+    line-height: 20px;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: posi2;
+    -webkit-animation-duration: 2s;
+    animation-name: posi2;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+
+  @keyframes posi2 {
+    from {top: 35%;}
+    to {top: 50%;}
+  }
+
+  .txt h1{
+    font-size: 40px;
+  }
+  .txt p{
+    font-size: 13px;
+  }
+}
+
+
+/*..........new media querries........*/
+
+
 /* /5 */
 
 /* 6 */
