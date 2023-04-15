@@ -369,11 +369,12 @@ Navbar
 
   .dropdown-link-item[navbar-data] {
     display: block;
-    width: 100%;
+    width: 150px;
     text-decoration: none;
     color: #000;
     padding: 10px;
     transition: 0.5s;
+    font-size: 10px;
   }
 
   .dropdown-link-item[navbar-data]:hover {
@@ -385,6 +386,7 @@ Navbar
     align-items: center;
     position: relative;
   }
+
   .nav-link-dropdown svg[navbar-data] {
     margin-left: 10px;
   }
@@ -395,9 +397,8 @@ Navbar
   .nav-link-dropdown-list[navbar-data] {
     display: none;
     position: absolute;
-    width: 165px;
     margin-left: 0;
-    top: 100%;
+    top: 80%;
     padding: 5px 20px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -405,8 +406,8 @@ Navbar
     transition: 0.3s;
     z-index: 1;
     max-height: 300px;
-    overflow-y: auto;
-    max-width: 200px;
+    max-width: 400px;
+    
   }
   .nav-link-dropdown-list ul[navbar-data] {
     list-style-type: none;
@@ -428,7 +429,10 @@ Navbar
   }
 
   .nav-link-dropdown:hover .nav-link-dropdown-list {
-    display: block !important;
+    /* display: block !important; */
+    display: flex !important;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .arrow-icon {

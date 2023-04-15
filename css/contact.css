@@ -299,6 +299,7 @@ Navbar
 .nav-links {
   display: none;
 }
+
 .nav {
   height: 6rem;
   padding: 1rem;
@@ -916,6 +917,7 @@ contact us page
     color: #000;
     padding: 10px;
     transition: 0.5s;
+    font-size: 100px;
   }
 
   .dropdown-link-item[navbar-data]:hover {
