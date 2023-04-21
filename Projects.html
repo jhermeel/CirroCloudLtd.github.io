@@ -24,10 +24,15 @@
       rel="stylesheet"
       href="./fontawesome-free-6.3.0-web/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
+    <link rel="stylesheet" href="./css/navbar.css" />
 
   </head>
   <body>
@@ -76,28 +81,43 @@
           </button>
         </div>
         <!-- nav-links -->
-        <ul class="nav-links">
-          <li>
-            <a href="index">home</a>
-          </li>
-          <li>
-            <a href="about">about us</a>
-          </li>
-          <li>
-            <a href="services">services</a>
-          </li>
-          <li>
-
-            <a href="products" class="active">Products</a>
-
-          </li>
-          <li>
-            <a href="blog">blog</a>
-          </li>
-          <li>
-            <a href="contact">Contact Us</a>
-          </li>
-        </ul>
+        <div class="nav-links" navbar-data>
+          <a href="index">Home</a>
+          <a href="about">About Us</a>
+          <div class="dropdown">
+            <a href="services" class="dropbtn">Services &#x25BC;</a>
+            <div class="dropdown-content">
+              <div class="dropdown-content-column">
+                <a href="digital">Digital Transformation</a>
+                <a href="modern">Modern Workplace</a>
+                <a href="adoption">Adoption And Change Management</a>
+                <a href="business">Business Applications</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="training">Training</a>
+                <a href="efris">Application Integration With Efris</a>
+                <a href="support">Support And Maintainance</a>
+                <a href="data">Data Visualisation</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="products" class="dropbtn">Products &#x25BC;</a>
+            <div class="dropdown-content">
+              <div class="dropdown-content-column">
+                <a href="office">Microsoft Office 365</a>
+                <a href="nav">Dynamic 365/Nav</a>
+                <a href="efris">Efris Intergrations</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="azure">Microsoft Azure</a>
+                <a href="power">Power Platform</a>
+              </div>
+            </div>
+          </div>
+          <a href="blog">Blog</a>
+          <a href="contact">Contact Us</a>
+        </div>
       </div>
     </nav>
     <!-- end of navbar -->
