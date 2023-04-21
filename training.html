@@ -4,31 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CirroCloud Solutions</title>
-    
-    <meta name="keywords" content="microsoft partners, cloud services, Efris integration, microsoft, microsoft 365">
-    <meta name="keywords" content="microsoft licensing, dynamics nav, microsoft azure, power platform">
-    <meta name="description" content="You are at the center of modern Workplace, digital transformation, adoption and Change Management. We offer services like dynamics nav, microsoft 365, efris integration and cloud services.">
-    <meta name="Efris-integration" content="yes">
-    <meta name="cloud-services" content="yes">
-    <meta name="dynamics-nav" content="yes">
-    <meta name="microsoft-365" content="yes">
-    <meta name="cloud-migration-services" content="yes">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Microsoft Partners">
-    <meta name="twitter:description" content="Learn about our cloud services, Microsoft 365, dynamics nav with Efris integration.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681041066/Cirrocloud%20web/blog/2022-10-14-Blog-Feature-What-is-Cloud-Computing-1-1200x620_dcdsmm.png">
-    <meta name="twitter:site" content="@CloudCirro">
-    
+
+    <meta
+      name="keywords"
+      content="microsoft partners, cloud services, Efris integration, microsoft, microsoft 365"
+    />
+    <meta
+      name="keywords"
+      content="microsoft licensing, dynamics nav, microsoft azure, power platform"
+    />
+    <meta
+      name="description"
+      content="You are at the center of modern Workplace, digital transformation, adoption and Change Management. We offer services like dynamics nav, microsoft 365, efris integration and cloud services."
+    />
+    <meta name="Efris-integration" content="yes" />
+    <meta name="cloud-services" content="yes" />
+    <meta name="dynamics-nav" content="yes" />
+    <meta name="microsoft-365" content="yes" />
+    <meta name="cloud-migration-services" content="yes" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Microsoft Partners" />
+    <meta
+      name="twitter:description"
+      content="Learn about our cloud services, Microsoft 365, dynamics nav with Efris integration."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681041066/Cirrocloud%20web/blog/2022-10-14-Blog-Feature-What-is-Cloud-Computing-1-1200x620_dcdsmm.png"
+    />
+    <meta name="twitter:site" content="@CloudCirro" />
+
     <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="./fontawesome-free-6.3.0-web/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
-
+    <link rel="stylesheet" href="jamie/jamie.css" />
+    <!-- jamie external css link  add to every page for the footer and navigation-->
+    <link rel="stylesheet" href="./css/navbar.css" />
   </head>
   <body>
     <!-- container -->
@@ -76,48 +96,43 @@
           </button>
         </div>
         <!-- nav-links -->
-        <ul class="nav-links">
-          <li>
-            <a href="index">home</a>
-          </li>
-          <li>
-            <a href="about">about us</a>
-          </li>
-          <li class="dropdown active">
-            <a href="services.html" class="dropbtn">services</a>
+        <div class="nav-links" navbar-data>
+          <a href="index">Home</a>
+          <a href="about">About Us</a>
+          <div class="dropdown">
+            <a href="services" class="dropbtn">Services &#x25BC;</a>
             <div class="dropdown-content">
-              <a href="digital.html">Digital Transformation</a>
-              <a href="modern.html">Modern Workplace</a>
-              <a href="adoption.html">Adoption And Change Management</a>
-              <a href="data.html">Data Visualisation</a>
-              <a href="business.html">Business Applications</a>            
-              <a href="efris.html">Application Integration With Efris</a>
-              <a href="training.html">Training</a>
-              <a href="document.html">Document Management</a>
-              <a href="support.html">Support And Maintainance</a>       
+              <div class="dropdown-content-column">
+                <a href="digital">Digital Transformation</a>
+                <a href="modern">Modern Workplace</a>
+                <a href="adoption">Adoption And Change Management</a>
+                <a href="business">Business Applications</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="training" class="active">Training</a>
+                <a href="efris">Application Integration With Efris</a>
+                <a href="support">Support And Maintainance</a>
+                <a href="data">Data Visualisation</a>
+              </div>
             </div>
-          </li>
-          
-          
-          
-          <li class="dropdown">
-            <a href="products.html" class="dropbtn" >Products</a>
+          </div>
+          <div class="dropdown">
+            <a href="products" class="dropbtn">Products &#x25BC;</a>
             <div class="dropdown-content">
-              <a href="office.html">Microsoft Office 365</a>
-              <a href="nav.html">Dynamic 365/Nav</a>
-              <a href="efris.html">Efris Intergrations</a>
-                <a href="azure.html">Microsoft Azure</a>
-              <a href="power.html">Power Platform</a>
-              <!-- <a href="adoption.html">Products</a> -->
+              <div class="dropdown-content-column">
+                <a href="office">Microsoft Office 365</a>
+                <a href="nav">Dynamic 365/Nav</a>
+                <a href="efris">Efris Intergrations</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="azure">Microsoft Azure</a>
+                <a href="power">Power Platform</a>
+              </div>
             </div>
-          </li>
-          <li>
-            <a href="blog">blog</a>
-          </li>
-          <li>
-            <a href="contact">Contact Us</a>
-          </li>
-        </ul>
+          </div>
+          <a href="blog">Blog</a>
+          <a href="contact">Contact Us</a>
+        </div>
       </div>
     </nav>
     <!-- end of navbar -->
@@ -160,7 +175,7 @@
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
-         
+
           <li>
             <a href="https://www.twitter.com" class="social-icon">
               <i class="fab fa-behance"></i>
@@ -177,113 +192,187 @@
     <!-- end of sidebar -->
 
     <!-- projects -->
-    <hr>
-      
-        <section class="section about section-center" style="margin-bottom: -50px;">
-            <div class="section-title section-center">
-                <h2>TRAINING</h2>
-                <div class="underline"></div>
-            <div class="section-center about-center">
-              <!-- about img -->
-              <article class="about-info" >
-                <span ><img
-                  src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1679838637/Cirrocloud%20web/Digital/training-areas-removebg-preview_gcajjv.png"
-                  class="support-photo"
-                  alt="about img"
-               /></span>
+    <hr />
 
-              </article>
-                            <!-- about info -->
-              <article class="timeline-item" >
-                <br><br>
-                <p class="digi-para">Cirrocloud Solutions is authorized to provide training and support for their products, and they can help customers gain the knowledge and skills they need to use Microsoft products effectively.
-                    Microsoft partners that provide training services may offer a range of training options, including: </p>
-                <p class="digi-para">
-                    <span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>In-person training:</b> This involves attending a training course in person, typically held at a physical location such as a training center or the customer's premises.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Virtual training:</b> This involves attending a training course online, either live or through pre-recorded sessions. Virtual training can be an effective way to provide training to a geographically dispersed audience.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Customized training:</b> Some partners may offer customized training programs tailored to the specific needs of a customer. This can be especially useful for customers with unique requirements or specific workflows.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Certification training:</b> Microsoft partners may offer training programs that prepare individuals for Microsoft certification exams. These programs can help individuals gain the skills and knowledge they need to earn Microsoft certifications, which can demonstrate their expertise and credibility to employers and customers.</span>
-           </article>
-            </div>
-          </section>
-               <!-- footer  starts-->
-<footer class="footer" style="background-image: url(https://res.cloudinary.com/dn2dpvceq/image/upload/v1681043078/Cirrocloud%20web/fbg_mg3joi.png)">
-  <div class="footer-col">  
-      <h3>Contact Us</h3>
-       <ul>
-      <li><a href="#"> Facebook</a></li>
-      <li><a href="#"> Twitter</a></li>
-      <li><a href="#"> Linkedin</a></li>
-      <li><a href="#"> +256708 002 002</a></li>
-    </ul><br>
-    <ul>
-      <li><a href="index.html"><img src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681041912/Cirrocloud%20web/logo_no_slogan_uium8a.svg" alt="Image" class="img-fluid"></a></li>
-       <li><a href="#">Enhance Effeciency to drive business value</a></li>
-   </ul>
-  </div>
-  <div class="footer-col">
-    <h3>Our Pages</h3>
-    <ul>
+    <section class="section about section-center" style="margin-bottom: -50px">
+      <div class="section-title section-center">
+        <h2>TRAINING</h2>
+        <div class="underline"></div>
+        <div class="section-center about-center">
+          <!-- about img -->
+          <article class="about-info">
+            <span
+              ><img
+                src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1679838637/Cirrocloud%20web/Digital/training-areas-removebg-preview_gcajjv.png"
+                class="support-photo"
+                alt="about img"
+            /></span>
+          </article>
+          <!-- about info -->
+          <article class="timeline-item">
+            <br /><br />
+            <p class="digi-para">
+              Cirrocloud Solutions is authorized to provide training and support
+              for their products, and they can help customers gain the knowledge
+              and skills they need to use Microsoft products effectively.
+              Microsoft partners that provide training services may offer a
+              range of training options, including:
+            </p>
+            <p class="digi-para">
+              <span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>In-person training:</b> This involves attending a training
+                course in person, typically held at a physical location such as
+                a training center or the customer's premises.</span
+              >
+
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Virtual training:</b> This involves attending a training
+                course online, either live or through pre-recorded sessions.
+                Virtual training can be an effective way to provide training to
+                a geographically dispersed audience.</span
+              >
+
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Customized training:</b> Some partners may offer customized
+                training programs tailored to the specific needs of a customer.
+                This can be especially useful for customers with unique
+                requirements or specific workflows.</span
+              >
+
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Certification training:</b> Microsoft partners may offer
+                training programs that prepare individuals for Microsoft
+                certification exams. These programs can help individuals gain
+                the skills and knowledge they need to earn Microsoft
+                certifications, which can demonstrate their expertise and
+                credibility to employers and customers.</span
+              >
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- footer  starts-->
+    <footer
+      class="footer"
+      style="
+        background-image: url(https://res.cloudinary.com/dn2dpvceq/image/upload/v1681043078/Cirrocloud%20web/fbg_mg3joi.png);
+      "
+    >
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="#"> Facebook</a></li>
+          <li><a href="#"> Twitter</a></li>
+          <li><a href="#"> Linkedin</a></li>
+          <li><a href="#"> +256708 002 002</a></li>
+        </ul>
+        <br />
+        <ul>
+          <li>
+            <a href="index.html"
+              ><img
+                src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681041912/Cirrocloud%20web/logo_no_slogan_uium8a.svg"
+                alt="Image"
+                class="img-fluid"
+            /></a>
+          </li>
+          <li><a href="#">Enhance Effeciency to drive business value</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Pages</h3>
+        <ul>
           <li><a href="index.html"> Home</a></li>
           <li><a href="about.html"> About Us</a></li>
           <li><a href="services.html"> Services</a></li>
           <li><a href="blog.html"> Blog</a></li>
           <li><a href="products.html"> Products</a></li>
           <li><a href="contact.html"> Contact Us</a></li>
-          <li><a href="contact.html"> Careers</a></li><br><br>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h3>Our Services</h3>
-    <ul>
-      <li><a href="#"> Modern Workplace</a></li>
-      <li><a href="#"> Adoption and Change Management</a></li>
-      <li><a href="#"> Business Applications</a></li>
-      <li><a href="#">Training</a></li>
-      <li><a href="#"> Application integration with Efris</a></li>
-      <li><a href="#">Support and Maintenance</a></li><br><br><br><br>
-    </ul>
-    </div>
-    <div class="footer-col">
-    <h3>Industries </h3>
-    <ul>
-       <li><a href="about.html"> Healthcare</a></li>
-      <li><a href="#"> Agriculture </a></li>
-      <li><a href="#"> Education </a></li>
-      <li><a href="#"> Financial Services </a></li>
-      <li><a href="#"> Government </a></li>
-      <li><a href="#"> Manufacturing & Resources </a></li>
-      <li><a href="#"> Power & Utilities </a></li>
-      <li><a href="#"> Professional Services </a></li>
-    </ul><br>
-  </div>
-  </div>
-  
-  <div class="footer-col">
-    <h3>Our Products </h3>
-    <ul>
+          <li><a href="contact.html"> Careers</a></li>
+          <br /><br />
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#"> Modern Workplace</a></li>
+          <li><a href="#"> Adoption and Change Management</a></li>
+          <li><a href="#"> Business Applications</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#"> Application integration with Efris</a></li>
+          <li><a href="#">Support and Maintenance</a></li>
+          <br /><br /><br /><br />
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Industries</h3>
+        <ul>
+          <li><a href="about.html"> Healthcare</a></li>
+          <li><a href="#"> Agriculture </a></li>
+          <li><a href="#"> Education </a></li>
+          <li><a href="#"> Financial Services </a></li>
+          <li><a href="#"> Government </a></li>
+          <li><a href="#"> Manufacturing & Resources </a></li>
+          <li><a href="#"> Power & Utilities </a></li>
+          <li><a href="#"> Professional Services </a></li>
+        </ul>
+        <br />
+      </div>
+
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul>
           <li><a href="#"> Office 365</a></li>
           <li><a href="#"> Dynamic Nav</a></li>
           <li><a href="#"> Efris Intergrations</a></li>
           <li><a href="#"> Microsoft Azure</a></li>
-    </ul><br>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug" width="220" height="110" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
-  </div>
-  
-</footer>
-<li style=" background-color:black ; text-align: center; color: blue; font-size: 0.8rem;
-;padding-bottom: 10px;padding-top: 10px;"><a href="#"> Copyright ©2023 All rights reserved | CirroCloud Solutions </a></li>
-<script src="./js/app.js"></script>
+        </ul>
+        <br />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug"
+          width="220"
+          height="110"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe
+        ><br /><br />
+      </div>
+    </footer>
+    <li
+      style="
+        background-color: black;
+        text-align: center;
+        color: blue;
+        font-size: 0.8rem;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      "
+    >
+      <a href="#">
+        Copyright ©2023 All rights reserved | CirroCloud Solutions
+      </a>
+    </li>
+    <script src="./js/app.js"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());  gtag('config', 'G-5K9EZMW5T3');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-5K9EZMW5T3');
+    </script>
   </body>
 </html>

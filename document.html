@@ -10,11 +10,16 @@
       rel="stylesheet"
       href="./fontawesome-free-6.3.0-web/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
-
+    <link rel="stylesheet" href="jamie/jamie.css" />
+    <!-- jamie external css link  add to every page for the footer and navigation-->
+    <link rel="stylesheet" href="./css/navbar.css" />
   </head>
   <body>
     <!-- container -->
@@ -62,49 +67,43 @@
           </button>
         </div>
         <!-- nav-links -->
-        <ul class="nav-links">
-          <li>
-            <a href="index">home</a>
-          </li>
-          <li>
-            <a href="about">about us</a>
-          </li>
-          <li class="dropdown active">
-            <a href="services.html" class="dropbtn">services</a>
+        <div class="nav-links" navbar-data>
+          <a href="index">Home</a>
+          <a href="about">About Us</a>
+          <div class="dropdown">
+            <a href="services" class="dropbtn">Services &#x25BC;</a>
             <div class="dropdown-content">
-              <a href="digital.html">Digital Transformation</a>
-              <a href="modern.html">Modern Workplace</a>
-              <a href="adoption.html">Adoption And Change Management</a>
-              <a href="data.html">Data Visualisation</a>
-              <a href="business.html">Business Applications</a>            
-              <a href="efris.html">Application Integration With Efris</a>
-              <a href="training.html">Training</a>
-              <a href="document.html">Document Management</a>
-              <a href="support.html">Support And Maintainance</a>       
+              <div class="dropdown-content-column">
+                <a href="digital">Digital Transformation</a>
+                <a href="modern">Modern Workplace</a>
+                <a href="adoption">Adoption And Change Management</a>
+                <a href="business">Business Applications</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="training">Training</a>
+                <a href="efris">Application Integration With Efris</a>
+                <a href="support">Support And Maintainance</a>
+                <a href="data">Data Visualisation</a>
+              </div>
             </div>
-          </li>
-          
-          
-          
-          
-          <li class="dropdown">
-            <a href="products.html" class="dropbtn" >Products</a>
+          </div>
+          <div class="dropdown">
+            <a href="products" class="dropbtn">Products &#x25BC;</a>
             <div class="dropdown-content">
-              <a href="office.html">Microsoft Office 365</a>
-              <a href="nav.html">Dynamic 365/Nav</a>
-              <a href="efris.html">Efris Intergrations</a>
-                <a href="azure.html">Microsoft Azure</a>
-              <a href="power.html">Power Platform</a>
-              <!-- <a href="adoption.html">Products</a> -->
+              <div class="dropdown-content-column">
+                <a href="office">Microsoft Office 365</a>
+                <a href="nav">Dynamic 365/Nav</a>
+                <a href="efris">Efris Intergrations</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="azure">Microsoft Azure</a>
+                <a href="power">Power Platform</a>
+              </div>
             </div>
-          </li>
-          <li>
-            <a href="blog">blog</a>
-          </li>
-          <li>
-            <a href="contact">Contact Us</a>
-          </li>
-        </ul>
+          </div>
+          <a href="blog">Blog</a>
+          <a href="contact">Contact Us</a>
+        </div>
       </div>
     </nav>
     <!-- end of navbar -->
@@ -147,7 +146,7 @@
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
-         
+
           <li>
             <a href="https://www.twitter.com" class="social-icon">
               <i class="fab fa-behance"></i>
@@ -164,121 +163,221 @@
     <!-- end of sidebar -->
 
     <!-- projects -->
-    <hr>
-      
-        <section class="section about">
-            <div class="section-title">
-                <h2>Document Management System (DMS)</h2>
-                <div class="underline"></div>
-            <div class="adoption-center about-center">
-              <!-- about img -->
-              <article class="adoption-info" style="background-color:#eff3f8;" >
-                <span ><img
-                  src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681376955/Cirrocloud%20web/services/istockphoto-1142390105-612x612_xczb5z.jpg"
-                  class="support-photo"
-                  alt="about img"
-               /></span>
+    <hr />
 
-              </article>
-                            <!-- about info -->
-              <article class="timeline-item" >
-                <br><br>
-                <p class="digi-para">A document management system (DMS) is a software application that is used to manage, store, track, and share electronic documents and files within an organization. A DMS provides a centralized location for storing and organizing documents, which can be accessed and edited by authorized personnel from anywhere with an internet connection. 
-                    With our custom solution for Microsoft Sharepoint Document Management System which boosts productivity by increasing collaboration and efficienntly manage documents in the cloud. Data is stored and accessed securely and optimally accross all levels of the organization. Features of our sharepoint Document Management Solution include;</p>
-                <p class="digi-para">
-                    <span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Document storage:</b> Our DMS allows users to store and manage documents electronically, eliminating the need for paper-based documents.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Version control:</b> Our Solution helps in maintaining and tracking the history of changes made to a document.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Access control:</b> Our system can be configured to control access to specific documents or folders based on user roles or permissions.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Document retrieval:</b> Users can quickly search for and retrieve documents based on keywords, tags, or other metadata.</span>
-                    
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Collaboration:</b> Our DMS enables teams to collaborate on documents, share feedback and track changes through various platforms including Teams, Sharepoint platform, Desktop with synchronization using Onedrive</span>
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Workflow automation:</b> It allows you to create workflows to automate document-related tasks such as approval and review processes.</span>   
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Security:</b> Our DMS provides secure storage for sensitive documents, with options for encryption, access controls, and audit trails</span>   
-                    <br><br><span style="margin-left: 3%; font-size: 90%;"><i class="fa fa-circle" aria-hidden="true"></i>  <b>Integration with other applications:</b> Our DMS can integrate with other applications such as CRM, ERP, and HRM systems to streamline document management processes.</span>   
-                    <p class="digi-para">In conclusion, Our DMS can help organizations to improve efficiency, reduce costs, and ensure compliance with regulatory requirements.</p>
-                    <p class="digi-para">    
-                </article>
-            </div>
-          </section>
-     <!-- footer  starts-->
+    <section class="section about">
+      <div class="section-title">
+        <h2>Document Management System (DMS)</h2>
+        <div class="underline"></div>
+        <div class="adoption-center about-center">
+          <!-- about img -->
+          <article class="adoption-info" style="background-color: #eff3f8">
+            <span
+              ><img
+                src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681376955/Cirrocloud%20web/services/istockphoto-1142390105-612x612_xczb5z.jpg"
+                class="support-photo"
+                alt="about img"
+            /></span>
+          </article>
+          <!-- about info -->
+          <article class="timeline-item">
+            <br /><br />
+            <p class="digi-para">
+              A document management system (DMS) is a software application that
+              is used to manage, store, track, and share electronic documents
+              and files within an organization. A DMS provides a centralized
+              location for storing and organizing documents, which can be
+              accessed and edited by authorized personnel from anywhere with an
+              internet connection. With our custom solution for Microsoft
+              Sharepoint Document Management System which boosts productivity by
+              increasing collaboration and efficienntly manage documents in the
+              cloud. Data is stored and accessed securely and optimally accross
+              all levels of the organization. Features of our sharepoint
+              Document Management Solution include;
+            </p>
+            <p class="digi-para">
+              <span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Document storage:</b> Our DMS allows users to store and
+                manage documents electronically, eliminating the need for
+                paper-based documents.</span
+              >
 
-<footer class="footer" style="background-image: url(https://res.cloudinary.com/dn2dpvceq/image/upload/v1681043078/Cirrocloud%20web/fbg_mg3joi.png)">
-  <div class="footer-col">  
-      <h3>Contact Us</h3>
-       <ul>
-      <li><a href="#"> Facebook</a></li>
-      <li><a href="#"> Twitter</a></li>
-      <li><a href="#"> Linkedin</a></li>
-      <li><a href="#"> +256708 002 002</a></li>
-    </ul><br>
-    <ul>
-      <li><a href="index.html"><img src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681041912/Cirrocloud%20web/logo_no_slogan_uium8a.svg" alt="Image" class="img-fluid"></a></li>
-       <li><a href="#">Enhance Effeciency to drive business value</a></li>
-   </ul>
-  </div>
-  <div class="footer-col">
-    <h3>Our Pages</h3>
-    <ul>
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Version control:</b> Our Solution helps in maintaining and
+                tracking the history of changes made to a document.</span
+              >
+
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Access control:</b> Our system can be configured to control
+                access to specific documents or folders based on user roles or
+                permissions.</span
+              >
+
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Document retrieval:</b> Users can quickly search for and
+                retrieve documents based on keywords, tags, or other
+                metadata.</span
+              >
+
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Collaboration:</b> Our DMS enables teams to collaborate on
+                documents, share feedback and track changes through various
+                platforms including Teams, Sharepoint platform, Desktop with
+                synchronization using Onedrive</span
+              >
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Workflow automation:</b> It allows you to create workflows to
+                automate document-related tasks such as approval and review
+                processes.</span
+              >
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Security:</b> Our DMS provides secure storage for sensitive
+                documents, with options for encryption, access controls, and
+                audit trails</span
+              >
+              <br /><br /><span style="margin-left: 3%; font-size: 90%"
+                ><i class="fa fa-circle" aria-hidden="true"></i>
+                <b>Integration with other applications:</b> Our DMS can
+                integrate with other applications such as CRM, ERP, and HRM
+                systems to streamline document management processes.</span
+              >
+            </p>
+
+            <p class="digi-para">
+              In conclusion, Our DMS can help organizations to improve
+              efficiency, reduce costs, and ensure compliance with regulatory
+              requirements.
+            </p>
+            <p class="digi-para"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- footer  starts-->
+
+    <footer
+      class="footer"
+      style="
+        background-image: url(https://res.cloudinary.com/dn2dpvceq/image/upload/v1681043078/Cirrocloud%20web/fbg_mg3joi.png);
+      "
+    >
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="#"> Facebook</a></li>
+          <li><a href="#"> Twitter</a></li>
+          <li><a href="#"> Linkedin</a></li>
+          <li><a href="#"> +256708 002 002</a></li>
+        </ul>
+        <br />
+        <ul>
+          <li>
+            <a href="index.html"
+              ><img
+                src="https://res.cloudinary.com/dn2dpvceq/image/upload/v1681041912/Cirrocloud%20web/logo_no_slogan_uium8a.svg"
+                alt="Image"
+                class="img-fluid"
+            /></a>
+          </li>
+          <li><a href="#">Enhance Effeciency to drive business value</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Pages</h3>
+        <ul>
           <li><a href="index.html"> Home</a></li>
           <li><a href="about.html"> About Us</a></li>
           <li><a href="services.html"> Services</a></li>
           <li><a href="blog.html"> Blog</a></li>
           <li><a href="products.html"> Products</a></li>
           <li><a href="contact.html"> Contact Us</a></li>
-          <li><a href="contact.html"> Careers</a></li><br><br>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h3>Our Services</h3>
-    <ul>
-      <li><a href="#"> Modern Workplace</a></li>
-      <li><a href="#"> Adoption and Change Management</a></li>
-      <li><a href="#"> Business Applications</a></li>
-      <li><a href="#">Training</a></li>
-      <li><a href="#"> Application integration with Efris</a></li>
-      <li><a href="#">Support and Maintenance</a></li><br><br><br><br>
-    </ul>
-    </div>
-    <div class="footer-col">
-    <h3>Industries </h3>
-    <ul>
-       <li><a href="about.html"> Healthcare</a></li>
-      <li><a href="#"> Agriculture </a></li>
-      <li><a href="#"> Education </a></li>
-      <li><a href="#"> Financial Services </a></li>
-      <li><a href="#"> Government </a></li>
-      <li><a href="#"> Manufacturing & Resources </a></li>
-      <li><a href="#"> Power & Utilities </a></li>
-      <li><a href="#"> Professional Services </a></li>
-    </ul><br>
-  </div>
-  </div>
-  
-  <div class="footer-col">
-    <h3>Our Products </h3>
-    <ul>
+          <li><a href="contact.html"> Careers</a></li>
+          <br /><br />
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#"> Modern Workplace</a></li>
+          <li><a href="#"> Adoption and Change Management</a></li>
+          <li><a href="#"> Business Applications</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#"> Application integration with Efris</a></li>
+          <li><a href="#">Support and Maintenance</a></li>
+          <br /><br /><br /><br />
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Industries</h3>
+        <ul>
+          <li><a href="about.html"> Healthcare</a></li>
+          <li><a href="#"> Agriculture </a></li>
+          <li><a href="#"> Education </a></li>
+          <li><a href="#"> Financial Services </a></li>
+          <li><a href="#"> Government </a></li>
+          <li><a href="#"> Manufacturing & Resources </a></li>
+          <li><a href="#"> Power & Utilities </a></li>
+          <li><a href="#"> Professional Services </a></li>
+        </ul>
+        <br />
+      </div>
+
+      <div class="footer-col">
+        <h3>Our Products</h3>
+        <ul>
           <li><a href="#"> Office 365</a></li>
           <li><a href="#"> Dynamic Nav</a></li>
           <li><a href="#"> Efris Intergrations</a></li>
           <li><a href="#"> Microsoft Azure</a></li>
-    </ul><br>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug" width="220" height="110" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
-  </div>
-  
-</footer>
-<li style=" background-color:black ; text-align: center; color: blue; font-size: 0.8rem;
-;padding-bottom: 10px;padding-top: 10px;"><a href="#"> Copyright ©2023 All rights reserved | CirroCloud Solutions </a></li>
-<script src="./js/app.js"></script>
+        </ul>
+        <br />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7469562198376!2d32.591629!3d0.3426902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbae22dad7cf%3A0xe5357846ec34c7b3!2s65%20Bukoto%20St%2C%20Kampala!5e0!3m2!1sen!2sug!4v1678612397554!5m2!1sen!2sug"
+          width="220"
+          height="110"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe
+        ><br /><br />
+      </div>
+    </footer>
+    <li
+      style="
+        background-color: black;
+        text-align: center;
+        color: blue;
+        font-size: 0.8rem;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      "
+    >
+      <a href="#">
+        Copyright ©2023 All rights reserved | CirroCloud Solutions
+      </a>
+    </li>
+    <script src="./js/app.js"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());  gtag('config', 'G-5K9EZMW5T3');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-5K9EZMW5T3');
+    </script>
   </body>
 </html>

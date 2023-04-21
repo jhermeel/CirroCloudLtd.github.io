@@ -24,10 +24,15 @@
       rel="stylesheet"
       href="./fontawesome-free-6.3.0-web/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="jamie/jamie.css"> <!-- jamie external css link  add to every page for the footer and navigation-->
+    <link rel="stylesheet" href="./css/navbar.css" />
 
   </head>
   <body>
@@ -76,49 +81,43 @@
           </button>
         </div>
         <!-- nav-links -->
-        <ul class="nav-links">
-          <li>
-            <a href="index">home</a>
-          </li>
-          <li>
-            <a href="about">about us</a>
-          </li>
-          <li class="dropdown">
-            <a href="services.html" class="dropbtn">services</a>
+        <div class="nav-links" navbar-data>
+          <a href="index">Home</a>
+          <a href="about">About Us</a>
+          <div class="dropdown">
+            <a href="services" class="dropbtn">Services &#x25BC;</a>
             <div class="dropdown-content">
-              <a href="digital.html">Digital Transformation</a>
-              <a href="modern.html">Modern Workplace</a>
-              <a href="adoption.html">Adoption And Change Management</a>
-              <a href="data.html">Data Visualisation</a>
-              <a href="business.html">Business Applications</a>            
-              <a href="efris.html">Application Integration With Efris</a>
-              <a href="training.html">Training</a>
-              <a href="document.html">Document Management</a>
-              <a href="support.html">Support And Maintainance</a>       
-
+              <div class="dropdown-content-column">
+                <a href="digital">Digital Transformation</a>
+                <a href="modern">Modern Workplace</a>
+                <a href="adoption">Adoption And Change Management</a>
+                <a href="business">Business Applications</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="training">Training</a>
+                <a href="efris">Application Integration With Efris</a>
+                <a href="support">Support And Maintainance</a>
+                <a href="data">Data Visualisation</a>
+              </div>
             </div>
-          </li>
-          </li>
-          
-          
-          
-          <li class="dropdown active">
-            <a href="products.html" class="dropbtn" >Products</a>
+          </div>
+          <div class="dropdown">
+            <a href="products" class="dropbtn">Products &#x25BC;</a>
             <div class="dropdown-content">
-             <a href="office.html">Microsoft Office 365</a>
-              <a href="nav.html">Dynamic 365/Nav</a>
-              <a href="efris.html">Efris Intergrations</a>
-              <a href="azure.html">Microsoft Azure</a>
-              <a href="power.html">Power Platform</a>
+              <div class="dropdown-content-column">
+                <a href="office">Microsoft Office 365</a>
+                <a href="nav">Dynamic 365/Nav</a>
+                <a href="efris">Efris Intergrations</a>
+              </div>
+              <div class="dropdown-content-column">
+                <a href="azure">Microsoft Azure</a>
+                <a href="power">Power Platform</a>
+              </div>
             </div>
-          </li>
-          <li>
-            <a href="blog">blog</a>
-          </li>
-          <li>
-            <a href="contact">Contact Us</a>
-          </li>
-        </ul>
+          </div>
+          <a href="blog" >Blog</a>
+          <a href="contact">Contact Us</a>
+        </div>
       </div>
     </nav>
     <!-- end of navbar -->
@@ -346,7 +345,6 @@
       <li><a href="#"> Power & Utilities </a></li>
       <li><a href="#"> Professional Services </a></li>
     </ul><br>
-  </div>
   </div>
   
   <div class="footer-col">
