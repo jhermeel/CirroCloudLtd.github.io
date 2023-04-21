@@ -198,10 +198,8 @@ p {
 .section {
   padding: 0rem 0;
 }
-.demoreq{
-  
-    padding: 0rem 0;
-  
+.demoreq {
+  padding: 0rem 0;
 }
 
 .greybg {
@@ -223,11 +221,10 @@ p {
   font-size: 2rem;
 
   /* margin-left: 20px; */
-  /* margin: 0px; */
-  /* max-width: 100%; */
-  /* overflow-x: hidden; */
+/* margin: 0px; */
+/* max-width: 100%; */
+/* overflow-x: hidden; */
 
- 
 .section-center {
   /* width: 100vw; */
   margin: 0px;
@@ -248,7 +245,7 @@ p {
   margin: 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background:  rgb(17, 173, 139);;
+  background: rgb(17, 173, 139);
 }
 .section-demo {
   /* width: 100vw; */
@@ -256,7 +253,6 @@ p {
   max-width: 100%;
   overflow-x: hidden;
   background-color: #041858;
-  ;
 }
 .adoption-center {
   /* width: 100vw; */
@@ -266,11 +262,6 @@ p {
   background: white;
 }
 
-/* @media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-} */
 /* added during recording */
 .underlined {
   width: 15rem;
@@ -292,7 +283,7 @@ p {
   width: 10rem;
   height: 0.3rem;
   margin-bottom: 1.25rem;
-  background:var(--primary-500);
+  background: var(--primary-500);
   margin-left: auto;
   margin-right: auto;
 }
@@ -301,11 +292,10 @@ p {
   text-align: center;
   padding-top: 10;
   /* background-image:url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733722/Cirrocloud%20web/random%20images/project-4_tkymai.jpg') ; */
-   position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 .section-title {
   margin-bottom: 4rem;
@@ -323,12 +313,12 @@ p {
 }
 .bg-darkgrey {
   background: #efe;
-  padding-top:4% ;
+  padding-top: 4%;
   padding-bottom: 3%;
   /* border-radius: 10%;
   margin-left: 400px;
   margin-right: 400px; */
-  
+
   /* margin-top: 20px; */
 }
 .bg-business {
@@ -373,7 +363,6 @@ NavBanner
 .caption-text:hover {
   text-decoration: underline;
 }
-
 
 /* fixed navbar */
 .navbar-fixed {
@@ -465,6 +454,34 @@ Sidebar
   .sidebar {
     display: none;
   }
+
+  .slide1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733652/Cirrocloud%20web/slider%202/img3_oei5hh.jpg');
+  }
+  .slide2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733557/Cirrocloud%20web/iner/iner4_wzf0bt.jpg');
+  }
+  .slide3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1681289345/Cirrocloud%20web/slider%202/arc_ucrojt.png');
+  }
+  .slide4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1681291855/Cirrocloud%20web/slider%202/Power-Platform-Digital-Factory_Blog-Banneredited_nx5sig.png');
+  }
+  .slide5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1681289345/Cirrocloud%20web/slider%202/arc_ucrojt.png');
+  }
+  .slider-image {
+    min-height: calc(100vh - 6rem - 20px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 /*
 =============== 
@@ -480,13 +497,12 @@ Hero
   align-items: center;
 }
 
-
 .hero-banner {
   text-align: center;
   color: var(--primary-100);
   padding: 0 2rem;
 }
-.section-services{
+.section-services {
   text-align: center;
   color: var(--primary-100);
   padding: 0 4rem;
@@ -517,12 +533,14 @@ Hero
 @media screen and (min-width: 768px) {
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733716/Cirrocloud%20web/random%20images/big_office_img_fqve67.jpg') center/cover no-repeat;
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733716/Cirrocloud%20web/random%20images/big_office_img_fqve67.jpg')
+        center/cover no-repeat;
     background-attachment: fixed;
   }
   .section-services {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
-      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733715/Cirrocloud%20web/random%20images/big_about_v3_t5d9zz.webp') center/cover no-repeat;
+      url('https://res.cloudinary.com/dn2dpvceq/image/upload/v1679733715/Cirrocloud%20web/random%20images/big_about_v3_t5d9zz.webp')
+        center/cover no-repeat;
     background-attachment: fixed;
   }
   .contact-bg {
@@ -654,7 +672,7 @@ Services
   transition: var(--transition);
 }
 .values {
-  background:rgb(17, 173, 139);
+  background: rgb(17, 173, 139);
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
@@ -1956,14 +1974,11 @@ input[type='submit']:hover {
   margin-right: 0.5rem;
 }
 
-
-         /* form css starts */
-.section-form{
+/* form css starts */
+.section-form {
   background-color: #041858;
-  
 
   margin: bottom 100px;
-
 }
 .demo {
   max-width: 500px;
@@ -1977,7 +1992,7 @@ input[type='submit']:hover {
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
-.form-title{
+.form-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
@@ -2014,8 +2029,8 @@ select option:checked {
   background-color: #007bff;
   color: #fff;
 }
-form input[type="name"],
-form input[type="email"],
+form input[type='name'],
+form input[type='email'],
 form input,
 form textarea {
   width: 100%;
@@ -2031,7 +2046,7 @@ form textarea {
   height: 150px;
 }
 
-form button[type="submit"] {
+form button[type='submit'] {
   background-color: #007bff;
   color: #fff;
   padding-top: 30px;
@@ -2042,6 +2057,6 @@ form button[type="submit"] {
   cursor: pointer;
 }
 
-form button[type="submit"]:hover {
+form button[type='submit']:hover {
   background-color: #0062cc;
 }
