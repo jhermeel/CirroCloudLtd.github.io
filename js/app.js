@@ -21,3 +21,22 @@ closeBtn.addEventListener('click', function () {
 // set year
 date.innerHTML = new Date().getFullYear();
 
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.nav-links');
+  const dropdownContent = document.querySelector('.dropdown-content');
+
+  if (window.pageYOffset > navbar.offsetHeight) {
+    dropdownContent.classList.add('nav-hidden');
+  } else {
+    dropdownContent.classList.remove('nav-hidden');
+  }
+});
+
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('#nav');
+  if (window.pageYOffset > 80) {
+    navbar.classList.add('navbar-fixed');
+  } else {
+    navbar.classList.remove('navbar-fixed');
+  }
+});
