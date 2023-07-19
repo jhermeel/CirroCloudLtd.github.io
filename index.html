@@ -372,13 +372,12 @@
             >Fill in to request for a Demo</a
           >
         </h2>
-
         <form class="demo">
           <!-- <label for="name">Name</label> -->
           <input
             type="name"
-            id="email"
-            name="email"
+            id="name"
+            name="name"
             required
             placeholder="Name"
           />
@@ -402,7 +401,7 @@
           <!-- <label for="company">Company</label> -->
           <input
             type="company"
-            id="phone"
+            id="company"
             name="company"
             required
             placeholder="Company"
@@ -874,6 +873,7 @@
       </a>
     </li>
     <script src="./js/app.js"></script>
+    <script src="./js/demo.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -881,13 +881,13 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-5K9EZMW5T3"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
+      gtag('js', new Date());
 
-      gtag('config', 'G-5K9EZMW5T3')
+      gtag('config', 'G-5K9EZMW5T3');
     </script>
     <script src="jamie/jamieslider.js"></script>
     <!-- .............slider js code  ............................-->
@@ -915,25 +915,25 @@
               },
             },
           ],
-        })
-      })
+        });
+      });
     </script>
     <!-- ..................chatboat starts......................... -->
     <script type="text/javascript">
-      ;(function (d, s, id) {
+      (function (d, s, id) {
         if (d.getElementById(id)) {
-          return
+          return;
         }
-        var u = '//www.livebeep.com/' + d.domain + '/eye.js?'
-        if ((h = d.location.href.split(/#ev!/)[1])) u += '?_e=' + h
+        var u = '//www.livebeep.com/' + d.domain + '/eye.js?';
+        if ((h = d.location.href.split(/#ev!/)[1])) u += '?_e=' + h;
         else if ((r = /.*\_evV=(\w+)\b.*/).test((c = d.cookie)))
-          u += '?_v=' + c.replace(r, '$1')
-        var js = d.createElement(s)
-        js.src = u
-        js.id = id
-        var fjs = d.getElementsByTagName(s)[0]
-        fjs.parentNode.insertBefore(js, fjs)
-      })(document, 'script', 'livebeep-script')
+          u += '?_v=' + c.replace(r, '$1');
+        var js = d.createElement(s);
+        js.src = u;
+        js.id = id;
+        var fjs = d.getElementsByTagName(s)[0];
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'livebeep-script');
     </script>
     <!-- ..................chatboat ends......................... -->
   </body>
